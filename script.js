@@ -1565,7 +1565,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.setAttribute('data-cursor', 'ZOOM');
         const curStr = slide.index < 10 ? `0${slide.index}` : `${slide.index}`;
         card.innerHTML = `
-          <img src="${slide.src}" alt="${slide.title}" class="creative-board-img" loading="lazy">
+          <img src="${slide.src}" alt="${slide.title}" class="creative-board-img" loading="eager" decoding="async">
           <span class="creative-slide-pill">${slide.badge || `SLIDE ${curStr}`}</span>
           <div class="creative-card-overlay">
             <span class="creative-card-title">${slide.title}</span>
@@ -1612,6 +1612,8 @@ document.addEventListener('DOMContentLoaded', () => {
       slides.slice(0, 7).forEach((s, idx) => {
         const thumb = document.createElement('img');
         thumb.src = s.src;
+        thumb.loading = 'eager';
+        thumb.decoding = 'async';
         thumb.className = 'amazon-thumb-item' + (idx === 0 ? ' active' : '');
         thumb.alt = s.title;
         thumb.addEventListener('click', () => {
@@ -2033,7 +2035,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 0,
       title: 'Kinetic Speed Blast — 3D Commercial Art',
       type: 'single',
-      img: '/AI_creation/Image.01.png',
+      img: '/ai_creation/Image.01.png',
       desc: 'Engineered for high-CTR sports launch campaigns and hero ad units. An athlete bursts off a Sportstech high-tech treadmill in extreme wide-angle forced perspective, surrounded by neon luminescent guide-tracks, cinematic motion blur, and kinetic particle vectors.',
       chips: ['HIGGSFIELD + COMFYUI', 'FORCED PERSPECTIVE', '4K MASTER', 'COMMERCIAL HERO']
     },
@@ -2041,7 +2043,7 @@ document.addEventListener('DOMContentLoaded', () => {
       id: 1,
       title: 'Desert Mirage Horizon — 5K Photoreal Commercial Synthesis',
       type: 'single',
-      img: '/AI_creation/Image.02.png',
+      img: '/ai_creation/Image.02.png',
       desc: 'Commercial-grade visual synthesis placing a high-performance Sportstech treadmill atop sweeping golden desert dunes. Features natural sun flare, physically accurate sand displacement around the footplate, and an OLED display mirroring the surrounding horizon.',
       chips: ['5568 × 3072 ULTRA-HD', 'PHYSICALLY ACCURATE LIGHTING', 'CATALOG GRADE', 'OLED HUD REFLECTIONS']
     },
@@ -2050,7 +2052,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'Interactive Pipeline Comparison: Raw AI Synthesis vs Master Retouch',
       type: 'split',
       beforeImg: '/ai_creation/c7364c53-1222-4e04-b317-e65b9cfa3f20_opt.jpg',
-      afterImg: '/AI_creation/Image.02.png',
+      afterImg: '/ai_creation/Image.02.png',
       desc: 'Drag the slider below to inspect the transformation: from raw unbranded AI diffusion output to final master commercial asset with branded Sportstech chassis livery, ambient rim lighting, and screen reflections.',
       chips: ['INTERACTIVE SPLIT SLIDER', 'BEFORE & AFTER', 'HARDWARE COHERENCE', 'SUB-PIXEL CLEANUP']
     },
@@ -2690,7 +2692,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'beauty',
       tag: 'SKINCARE AUTHENTICITY',
       res: '5.5K ULTRA-HD',
-      src: '/ugc_images/ugc_img_09.png',
+      src: '/ugc_images/ugc_img_09.jpg',
       desc: 'Sunlit studio macro photograph showcasing natural skin tones and organic product alignment.',
       strategy: 'Engineered for high-converting TikTok and Meta beauty ads.'
     },
