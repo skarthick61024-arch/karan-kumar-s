@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typographic Precision &amp; Inpainting — AI Creation Showcase | Karan Kumar S</title>
+  <meta name="description" content="AI Creation Showcase: Sub-pixel typographic precision and hardware chassis inpainting with interactive Before/After split slider by Karan Kumar S.">
+  <meta name="author" content="Karan Kumar S">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Typographic Precision & Inpainting — AI Creation by Karan Kumar S">
+  <meta property="og:description" content="Sub-pixel inpainting pipeline eliminating AI text distortions with interactive Before/After split comparison.">
+  <meta property="og:image" content="/ai_creation/hf_20260127_093405_6d7ee661-86b6-4177-8019-bc5c29bae9ea_opt.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="paper-canvas">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Ambient Fluid Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- Tactile Paper Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark" aria-label="Karan Kumar S Portfolio Home">
+        <div class="brand-avatar-wrap">
+          <img src="/behance_assets/crops/karan_kumar_portrait.jpg" alt="Karan Kumar S" class="brand-avatar-img">
+          <span class="brand-online-dot" title="Available for Creative Direction"></span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">KARAN KUMAR S</span>
+          <span class="brand-role">AI CREATIVE STRATEGIST &bull; E-COMMERCE VISUAL DESIGNER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html#ai-creation" class="nav-link">&larr; Back to Portfolio</a></li>
+          <li><a href="ai-creation-kinetic-speed.html" class="nav-link">Kinetic Speed</a></li>
+          <li><a href="ai-creation-desert-mirage.html" class="nav-link">Desert Mirage 5K</a></li>
+          <li><a href="ai-creation-inpainting.html" class="nav-link active">Inpainting &amp; Split</a></li>
+          <li><a href="case-study-redbull.html" class="nav-link">Red Bull Spec</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn-primary-header">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-head">
+        <span class="drawer-title">Navigation</span>
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">&larr; Back to Portfolio Home</a></li>
+        <li><a href="ai-creation-kinetic-speed.html" class="mobile-link">01. Kinetic Speed Blast</a></li>
+        <li><a href="ai-creation-desert-mirage.html" class="mobile-link">02. Desert Mirage 5K</a></li>
+        <li><a href="ai-creation-inpainting.html" class="mobile-link active">03. Inpainting &amp; Split Slider</a></li>
+        <li><a href="case-study-redbull.html" class="mobile-link">04. Red Bull AI Commercial</a></li>
+        <li><a href="index.html#contact" class="mobile-link">05. Get in Touch</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- Solo Showcase Section -->
+    <section class="section-container" style="padding-top: 130px; padding-bottom: 80px;">
+      
+      <!-- Breadcrumbs -->
+      <nav class="project-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px; display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: #8C92A4;">
+        <a href="index.html" style="color: #4A5568; text-decoration: none;">Home</a>
+        <span>&rsaquo;</span>
+        <a href="index.html#ai-creation" style="color: #4A5568; text-decoration: none;">AI Creation</a>
+        <span>&rsaquo;</span>
+        <span style="color: #E60028; font-weight: 700;">Typographic Precision &amp; Inpainting</span>
+      </nav>
+
+      <!-- Header -->
+      <div class="solo-showcase-head" style="margin-bottom: 32px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+          <span style="background: rgba(16,185,129,0.1); color: #059669; font-family: var(--font-mono); font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 999px;">🎯 SUB-PIXEL CLEANUP</span>
+          <span style="background: #FEF3C7; color: #B45309; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">INTERACTIVE BEFORE / AFTER SLIDER</span>
+          <span style="background: #EFF6FF; color: #1D4ED8; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">ZERO BRAND ARTIFACTS</span>
+        </div>
+        <h1 style="font-family: var(--font-display-modern); font-size: clamp(30px, 4.5vw, 50px); color: var(--text-dark); margin: 0 0 14px 0; text-transform: uppercase;">
+          Typographic Precision &amp; Inpainting
+        </h1>
+        <p style="font-family: var(--font-body); font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 900px; margin: 0;">
+          Eliminating AI hallucination in commercial branding: interactive split comparison illustrating how raw diffusion artifacts are retouched into commercial packaging quality with sub-pixel edge masking.
+        </p>
+      </div>
+
+      <!-- Interactive Before / After Split Slider Stage -->
+      <div class="before-after-container" style="background: #090B10; border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.4); padding: 24px;">
+        <div class="split-slider-header" style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #34D399; text-transform: uppercase;">INTERACTIVE COMPARISON</span>
+            <h4 style="font-family: var(--font-display-modern); font-size: 20px; color: #FFFFFF; margin: 4px 0 0 0;">Drag Slider to Compare: Raw Generation vs. Retouched Master</h4>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #94A3B8;">&larr; Drag Center Handle &rarr;</span>
+        </div>
+
+        <div class="split-slider-stage" id="splitSliderStage" style="position: relative; width: 100%; aspect-ratio: 16/9; max-height: 640px; border-radius: 12px; overflow: hidden; user-select: none;">
+          <!-- Before (Underneath/Full) -->
+          <img 
+            src="/ai_creation/hf_20260127_093405_6d7ee661-86b6-4177-8019-bc5c29bae9ea_opt.jpg" 
+            alt="AI Inpainting Retouched Result" 
+            class="split-img-after"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+          >
+          <span class="split-badge-label after-label" style="position: absolute; bottom: 20px; right: 20px; background: rgba(5,150,105,0.85); backdrop-filter: blur(8px); color: #FFFFFF; font-family: var(--font-mono); font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 999px;">
+            AFTER: SUB-PIXEL RETOUCHED
+          </span>
+
+          <!-- After (Clipped Over Top) -->
+          <div class="split-clipped-wrapper" id="splitClippedWrapper" style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 2px solid #FFFFFF;">
+            <img 
+              src="/ai_creation/hf_20260127_093405_6d7ee661-86b6-4177-8019-bc5c29bae9ea_opt.jpg" 
+              alt="Raw AI Diffusion Output" 
+              class="split-img-before"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.7) contrast(1.15) brightness(0.95);"
+            >
+            <span class="split-badge-label before-label" style="position: absolute; bottom: 20px; left: 20px; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); color: #FFC226; font-family: var(--font-mono); font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 999px;">
+              BEFORE: RAW DIFFUSION PASS
+            </span>
+          </div>
+
+          <!-- Draggable Handle Bar -->
+          <div class="split-slider-handle" id="splitHandle" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #FFFFFF; cursor: ew-resize; transform: translateX(-50%); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 38px; height: 38px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 4px 15px rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: #000; font-size: 13px; font-weight: 800;">
+              &harr;
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical Architecture Breakdown -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
+        <div style="background: #FFFFFF; border: 1px solid var(--canvas-paper-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #059669;">CHALLENGE</span>
+          <h4 style="font-family: var(--font-display-modern); font-size: 18px; margin: 8px 0 6px 0; color: var(--text-dark);">Diffusion Text Jaggies</h4>
+          <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Generative text models frequently distort micro-lettering, kerning, and registered trademark symbols (&reg;, &trade;) on curved metallic cylinders.
+          </p>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid var(--canvas-paper-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #2563EB;">SOLUTION</span>
+          <h4 style="font-family: var(--font-display-modern); font-size: 18px; margin: 8px 0 6px 0; color: var(--text-dark);">Sub-Pixel Vector Masking</h4>
+          <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Extracted high-resolution vector paths, mapped to surface curvature, and inpainted with strict 0.2 denoising strength to restore razor edges.
+          </p>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid var(--canvas-paper-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #7C3AED;">OUTCOME</span>
+          <h4 style="font-family: var(--font-display-modern); font-size: 18px; margin: 8px 0 6px 0; color: var(--text-dark);">Production-Grade Commercial Asset</h4>
+          <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Complies with corporate legal brand guidelines while keeping the rich atmospheric lighting synthesized by the underlying diffusion model.
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Footer -->
+      <div class="case-study-nav-footer" style="padding-top: 30px; border-top: 1px solid var(--canvas-paper-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="ai-creation-desert-mirage.html" class="btn-subtle" style="text-decoration: none;">
+          <span>&larr; Previous: Desert Mirage 5K</span>
+        </a>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="case-study-redbull.html" class="btn-primary-header" style="text-decoration: none;">
+            <span>Flagship Commercial: Red Bull Racing AI Ad &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-stage">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-media-wrapper">
+        <img src="" alt="Enlarged Visual" class="lightbox-img" id="lightboxImg">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toastText"></span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div class="footer-col-brand">
+          <span class="footer-logo">KARAN KUMAR S</span>
+          <p class="footer-desc">AI Creative Strategist &amp; E-Commerce Visual Designer &bull; Madurai, Tamil Nadu &bull; Worldwide</p>
+        </div>
+        <div class="footer-col-links">
+          <a href="index.html">Home</a>
+          <a href="ai-creation-kinetic-speed.html">Kinetic Speed Blast</a>
+          <a href="ai-creation-desert-mirage.html">Desert Mirage 5K</a>
+          <a href="ai-creation-inpainting.html">Brand Inpainting</a>
+          <a href="case-study-redbull.html">Red Bull Spec Ad</a>
+          <a href="index.html#contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 Karan Kumar S. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

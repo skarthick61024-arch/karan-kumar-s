@@ -1,0 +1,15 @@
+{
+  "name": "karan-kumar-s-portfolio-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Karan Kumar S — AI Creative Strategist & E-Commerce Visual Designer Portfolio 2026",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

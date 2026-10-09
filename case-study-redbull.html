@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Bull Racing — "Unleash The Beast" | End-to-End AI Commercial Case Study | Karan Kumar S</title>
+  <meta name="description" content="Technical production case study of Red Bull Racing 'Unleash The Beast' 32-second commercial directed and engineered by Karan Kumar S using Kling 1.5 Pro, custom SDXL LoRA face training, ComfyUI, and ElevenLabs neural foley.">
+  <meta name="author" content="Karan Kumar S">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Red Bull Racing — 'Unleash The Beast' AI Commercial Case Study">
+  <meta property="og:description" content="Complete end-to-end generative AI production pipeline: 48-hour turnaround, custom driver LoRA, 7-scene storyboard, and neural audio scoring.">
+  <meta property="og:image" content="/ai_creation/redbull/frames/frame_05.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="paper-canvas">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Ambient Fluid Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- Tactile Paper Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark" aria-label="Karan Kumar S Portfolio Home">
+        <div class="brand-avatar-wrap">
+          <img src="/behance_assets/crops/karan_kumar_portrait.jpg" alt="Karan Kumar S" class="brand-avatar-img">
+          <span class="brand-online-dot" title="Available for Creative Direction"></span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">KARAN KUMAR S</span>
+          <span class="brand-role">AI CREATIVE STRATEGIST &bull; E-COMMERCE VISUAL DESIGNER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">&larr; Back to Portfolio</a></li>
+          <li><a href="ai-creation.html" class="nav-link">AI Creation</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="ugc-videos.html" class="nav-link">UGC Videos</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn-primary-header">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-head">
+        <span class="drawer-title">Navigation</span>
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">&larr; Back to Portfolio Home</a></li>
+        <li><a href="ai-creation.html" class="mobile-link">01. AI Creation Atelier</a></li>
+        <li><a href="case-studies.html" class="mobile-link">02. Strategic Case Studies</a></li>
+        <li><a href="ugc-videos.html" class="mobile-link">03. UGC Video Vault</a></li>
+        <li><a href="index.html#contact" class="mobile-link">04. Get in Touch</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- Case Study Top Breadcrumb & Hero -->
+    <div class="page-top-hero dark-zone" style="padding: 140px 0 40px 0; background: linear-gradient(180deg, #090B10 0%, #0D1017 100%); border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <div class="section-container">
+        
+        <!-- Breadcrumb Row -->
+        <nav class="project-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px; display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: #8C92A4;">
+          <a href="index.html" style="color: #CBD5E1; text-decoration: none;">Home</a>
+          <span>&rsaquo;</span>
+          <a href="ai-creation.html" style="color: #CBD5E1; text-decoration: none;">AI Creation</a>
+          <span>&rsaquo;</span>
+          <span style="color: #FFC226; font-weight: 700;">Red Bull Racing Case Study</span>
+        </nav>
+
+        <!-- Red Bull Flagship Showcase Block -->
+        <div class="redbull-showcase-container" style="margin: 0; border: 1px solid rgba(230, 0, 40, 0.4);">
+          <div class="redbull-showcase-header">
+            <div class="redbull-badge-row">
+              <span class="redbull-badge f1-flagship">🏎️ FLAGSHIP AI SPEC COMMERCIAL</span>
+              <span class="redbull-badge f1-runtime">0:32 &bull; 1080P 60FPS</span>
+              <span class="redbull-badge f1-audio-tag">🔊 NEURAL FOLEY &amp; V10 ENGINE AUDIO</span>
+              <span class="redbull-badge f1-lora-tag">KARAN KUMAR S AS F1 DRIVER</span>
+            </div>
+            <h1 class="redbull-title" style="font-size: 40px; margin-bottom: 14px;">RED BULL RACING &mdash; &ldquo;UNLEASH THE BEAST&rdquo;</h1>
+            <p class="redbull-subtitle" style="font-size: 16px; line-height: 1.7;">
+              End-to-end generative AI spec commercial directed, written, and engineered by <strong>Karan Kumar S</strong>. Conceived around the emotional narrative arc of an F1 breakdown, cryogenic sensory reignition, midnight wheel-to-wheel combat, and the surreal climax of riding a galloping Red Bull down the main straight. Featuring custom Kohya SDXL LoRA character consistency for the driver, ComfyUI livery inpainting, and neural foley audio.
+            </p>
+          </div>
+
+          <!-- Cinema Player Stage -->
+          <div class="redbull-player-stage" id="redbullPlayerStage">
+            <video 
+              id="redbullVideo" 
+              src="/ai_creation/redbull/RedBull_Ad.mp4" 
+              preload="metadata" 
+              playsinline 
+              loop 
+              muted
+              poster="/ai_creation/redbull/frames/frame_05.jpg"
+              class="redbull-video-element"
+            ></video>
+
+            <!-- Big Center Play Button Overlay -->
+            <div class="redbull-play-overlay" id="redbullPlayOverlay">
+              <button class="redbull-big-play-btn" id="redbullBigPlayBtn" aria-label="Play Red Bull Commercial">
+                <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+                <span class="big-play-label">WATCH FILM</span>
+              </button>
+            </div>
+
+            <!-- Cinema Audio Prompt Callout -->
+            <button class="redbull-audio-callout-pill" id="redbullAudioPill" aria-label="Enable Studio Sound">
+              <span class="audio-pulse-dot"></span>
+              <svg class="audio-pill-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+              <span class="audio-pill-text" id="redbullAudioPillText">🔊 Tap for Cinema Sound &amp; F1 V10 Audio</span>
+            </button>
+
+            <!-- Custom Video Controller Bar -->
+            <div class="redbull-controls-bar">
+              <button class="rb-ctrl-btn" id="redbullPlayPauseBtn" aria-label="Play/Pause">
+                <svg class="rb-icon-play" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+                <svg class="rb-icon-pause" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+              </button>
+
+              <div class="rb-scrubber-track" id="redbullScrubberTrack">
+                <div class="rb-scrubber-fill" id="redbullScrubberFill"></div>
+              </div>
+
+              <span class="rb-time-display" id="redbullTimeDisplay">0:00 / 0:32</span>
+
+              <button class="rb-ctrl-btn" id="redbullMuteBtn" aria-label="Toggle Sound">
+                <svg class="rb-icon-muted" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                  <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                </svg>
+                <svg class="rb-icon-unmuted" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" style="display:none;">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+              </button>
+
+              <button class="rb-ctrl-btn" id="redbullFullscreenBtn" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive 7-Stage Keyframe Storyboard Strip -->
+          <div class="redbull-storyboard-block">
+            <div class="redbull-filmstrip-header">
+              <div class="filmstrip-title-group">
+                <span class="filmstrip-live-badge">🎬 7-STAGE GENERATIVE STORYBOARD KEYFRAMES</span>
+                <span class="filmstrip-helper">Click any frame to jump to video scene &amp; inspect prompt architecture</span>
+              </div>
+              <a href="#pipeline-breakdown" class="filmstrip-casestudy-link">
+                <span>View Full Prompt Breakdown Below</span> &darr;
+              </a>
+            </div>
+
+            <div class="redbull-filmstrip-track" id="redbullFilmstripTrack">
+              <!-- Frame 01 -->
+              <div class="rb-frame-card" data-seek-time="0" data-frame-idx="1" data-frame-src="/ai_creation/redbull/frames/frame_01.jpg" data-frame-title="Scene 01: Breakdown &amp; Desolation" data-frame-desc="F1 racecar stranded at track edge under dusk sky. Driver Karan Kumar S walking away into gravel pit. Sets up emotional low-point and narrative stakes.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_01.jpg" alt="Scene 01 - Circuit Breakdown" loading="lazy">
+                  <span class="rb-frame-timestamp">0:00</span>
+                  <span class="rb-frame-tag">ACT I: THE HOOK</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">01. Breakdown &amp; Desolation</h5>
+                  <p class="rb-frame-scene-summary">Dusk circuit desolation, mechanical failure, driver walking into gravel.</p>
+                </div>
+              </div>
+
+              <!-- Frame 02 -->
+              <div class="rb-frame-card" data-seek-time="4" data-frame-idx="2" data-frame-src="/ai_creation/redbull/frames/frame_02.jpg" data-frame-title="Scene 02: The Catalyst — Cold Storage" data-frame-desc="Pit crew reveals heavy-duty frosted aluminum chest under floodlights, cracking open to expose sub-zero vapor and ice-cold Red Bull cans.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_02.jpg" alt="Scene 02 - Pit Crew Catalyst" loading="lazy">
+                  <span class="rb-frame-timestamp">0:04</span>
+                  <span class="rb-frame-tag">ACT I: CATALYST</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">02. Pit Crew Catalyst</h5>
+                  <p class="rb-frame-scene-summary">Frosted aluminum chest, cryogenic condensation, and team rescue.</p>
+                </div>
+              </div>
+
+              <!-- Frame 03 -->
+              <div class="rb-frame-card" data-seek-time="8" data-frame-idx="3" data-frame-src="/ai_creation/redbull/frames/frame_03.jpg" data-frame-title="Scene 03: Macro Can Tab Ignition" data-frame-desc="Macro 50mm pull-tab release. Micro-droplet kinetic turbulence bursting under studio rim lights, signaling sensory activation.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_03.jpg" alt="Scene 03 - Macro Can Tab" loading="lazy">
+                  <span class="rb-frame-timestamp">0:08</span>
+                  <span class="rb-frame-tag">ACT II: IGNITION</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">03. Macro Can Ignition</h5>
+                  <p class="rb-frame-scene-summary">High-speed fluid spray, pressurized carbonation, metallic ring-pull.</p>
+                </div>
+              </div>
+
+              <!-- Frame 04 -->
+              <div class="rb-frame-card" data-seek-time="13" data-frame-idx="4" data-frame-src="/ai_creation/redbull/frames/frame_04.jpg" data-frame-title="Scene 04: The Cold Ingestion" data-frame-desc="First-person POV into the icy can rim against the evening grandstand and waiting racecar, representing cognitive restart.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_04.jpg" alt="Scene 04 - The Cold Ingestion" loading="lazy">
+                  <span class="rb-frame-timestamp">0:13</span>
+                  <span class="rb-frame-tag">ACT II: SENSORY</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">04. The Cold Ingestion</h5>
+                  <p class="rb-frame-scene-summary">First-person POV drink angle, circuit lights blurred in atmospheric haze.</p>
+                </div>
+              </div>
+
+              <!-- Frame 05 -->
+              <div class="rb-frame-card" data-seek-time="17" data-frame-idx="5" data-frame-src="/ai_creation/redbull/frames/frame_05.jpg" data-frame-title="Scene 05: Cockpit Awakening (LoRA Persistence)" data-frame-desc="Driver Karan Kumar S locked into the Red Bull cockpit. Tight visor reflection, racing harness, and carbon-fiber steering telemetry.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_05.jpg" alt="Scene 05 - Cockpit Awakening" loading="lazy">
+                  <span class="rb-frame-timestamp">0:17</span>
+                  <span class="rb-frame-tag">ACT III: FOCUS</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">05. Cockpit Awakening</h5>
+                  <p class="rb-frame-scene-summary">Karan Kumar S face LoRA consistency, steering HUD, race adrenaline.</p>
+                </div>
+              </div>
+
+              <!-- Frame 06 -->
+              <div class="rb-frame-card" data-seek-time="21" data-frame-idx="6" data-frame-src="/ai_creation/redbull/frames/frame_06.jpg" data-frame-title="Scene 06: Midnight Duel at 330 KM/H" data-frame-desc="Wheel-to-wheel combat against Mercedes F1 at 330 km/h. Titanium underfloor sparks, vortex rooster tails, and blinding track floodlights.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_06.jpg" alt="Scene 06 - 330 KM/H Duel" loading="lazy">
+                  <span class="rb-frame-timestamp">0:21</span>
+                  <span class="rb-frame-tag">ACT III: VELOCITY</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">06. 330 KM/H Night Duel</h5>
+                  <p class="rb-frame-scene-summary">High-speed side-by-side overtake, sparking underplanks, wet track glare.</p>
+                </div>
+              </div>
+
+              <!-- Frame 07 -->
+              <div class="rb-frame-card" data-seek-time="26" data-frame-idx="7" data-frame-src="/ai_creation/redbull/frames/frame_07.jpg" data-frame-title="Scene 07: Climax — Riding the Beast" data-frame-desc="The brand metaphor unleashed: driver riding a titanic muscular Red Bull with molten sparks flying from its hooves storming down the asphalt.">
+                <div class="rb-frame-thumb-wrap">
+                  <img src="/ai_creation/redbull/frames/frame_07.jpg" alt="Scene 07 - Climax Galloping Bull" loading="lazy">
+                  <span class="rb-frame-timestamp">0:26</span>
+                  <span class="rb-frame-tag">FINALE: UNLEASH</span>
+                </div>
+                <div class="rb-frame-info">
+                  <h5 class="rb-frame-scene-title">07. Unleash The Beast</h5>
+                  <p class="rb-frame-scene-summary">Surreal brand climax: galloping bull, sparking hooves, checkered flag.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Production Technical Badges -->
+          <div class="redbull-tech-specs-bar">
+            <div class="rb-spec-item">
+              <span class="rb-spec-k">VIDEO DIFFUSION ENGINE</span>
+              <span class="rb-spec-v">Kling 1.5 Pro + Wan 2.1 Motion Control</span>
+            </div>
+            <div class="rb-spec-item">
+              <span class="rb-spec-k">CHARACTER CONSISTENCY</span>
+              <span class="rb-spec-v">Custom LoRA (Karan Kumar S, 35 Images @ Rank 64)</span>
+            </div>
+            <div class="rb-spec-item">
+              <span class="rb-spec-k">INPAINTING &amp; COHERENCE</span>
+              <span class="rb-spec-v">ComfyUI Sub-Pixel Livery &amp; Rim-Light Correction</span>
+            </div>
+            <div class="rb-spec-item">
+              <span class="rb-spec-k">AUDIO &amp; SOUND DESIGN</span>
+              <span class="rb-spec-v">ElevenLabs Neural Foley + V10 F1 Turbo Symphony</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Deep-Dive Technical Case Study Section -->
+    <section class="section-container" id="pipeline-breakdown" style="padding: 60px 24px 100px 24px;">
+      
+      <!-- ========================================================================= -->
+      <!-- DEEP-DIVE TECHNICAL CASE STUDY: RED BULL RACING "UNLEASH THE BEAST" -->
+      <!-- ========================================================================= -->
+      <article class="redbull-deepdive-article" id="redbullCaseStudy" style="margin-top: 0;">
+        <div class="deepdive-header-card">
+          <div class="deepdive-meta-top">
+            <span class="deepdive-pill-f1">🏎️ TECHNICAL PRODUCTION CASE STUDY</span>
+            <span class="deepdive-pill-date">OCTOBER 2026 &bull; SPEC FILM PIPELINE</span>
+            <span class="deepdive-pill-author">DIRECTOR &amp; AI ARTIST: KARAN KUMAR S</span>
+          </div>
+          <h2 class="deepdive-headline" style="font-size: 32px;">
+            HOW WE CREATED THE RED BULL RACING COMMERCIAL:
+            <span class="deepdive-subaccent">Full End-to-End Generative AI Production Pipeline</span>
+          </h2>
+          <p class="deepdive-summary-lead">
+            A comprehensive technical post-mortem of directing and synthesizing a broadcast-caliber 32-second Formula 1 commercial without physical cameras, 3D motion capture rigs, or an eight-figure Hollywood budget. Demonstrating how modern generative video tools can achieve strict brand livery fidelity, custom character face persistence, high-velocity motion dynamics, and neural audio scoring in under 48 hours.
+          </p>
+
+          <!-- Production KPI Metrics Grid -->
+          <div class="deepdive-metrics-grid">
+            <div class="deepdive-metric-box">
+              <span class="dd-m-val">48 Hrs</span>
+              <span class="dd-m-lbl">Turnaround vs 6-8 Wks Traditional CGI</span>
+            </div>
+            <div class="deepdive-metric-box">
+              <span class="dd-m-val">35 Img</span>
+              <span class="dd-m-lbl">Karan Kumar S Face LoRA Training Set</span>
+            </div>
+            <div class="deepdive-metric-box">
+              <span class="dd-m-val">7 Scenes</span>
+              <span class="dd-m-lbl">Multi-Prompt Keyframe Sequence</span>
+            </div>
+            <div class="deepdive-metric-box">
+              <span class="dd-m-val">1080p 60fps</span>
+              <span class="dd-m-lbl">Topaz Neural Frame Interpolation</span>
+            </div>
+            <div class="deepdive-metric-box">
+              <span class="dd-m-val">92%</span>
+              <span class="dd-m-lbl">Estimated Production Cost Reduction</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 1: Conceptual Direction & Narrative Arc -->
+        <div class="deepdive-phase-section">
+          <div class="phase-number-badge">PHASE 01</div>
+          <h3 class="phase-title">Narrative Architecture &amp; The &ldquo;Unleash The Beast&rdquo; Concept</h3>
+          <p class="phase-body-text">
+            High-impact commercial directing requires emotional contrast. Rather than opening with a generic high-speed car pass, we designed a classic <strong>Three-Act Resurrection Arc</strong> tailored to Red Bull&rsquo;s core brand positioning (&ldquo;Gives You Wings&rdquo; / &ldquo;Unleash the Beast&rdquo;):
+          </p>
+          <div class="phase-three-act-grid">
+            <div class="act-card">
+              <span class="act-tag">ACT I &bull; THE COLLAPSE (0:00 - 0:08)</span>
+              <h4>Desolation &amp; Mechanical Failure</h4>
+              <p>Stranded on the circuit edge at dusk. Atmospheric gravel smoke, exhausted driver (Karan Kumar S) abandoning the car, establishing psychological stakes before redemption.</p>
+            </div>
+            <div class="act-card">
+              <span class="act-tag">ACT II &bull; THE CATALYST (0:08 - 0:17)</span>
+              <h4>Cryogenic Ingestion &amp; Ignition</h4>
+              <p>The pit crew deploys a sub-zero aluminum chest. Extreme macro pull-tab crack, pressurized micro-droplet kinetic spray, and first-person POV ingestion that triggers neurological awakening.</p>
+            </div>
+            <div class="act-card">
+              <span class="act-tag">ACT III &bull; THE CLIMAX (0:17 - 0:32)</span>
+              <h4>Wheel-to-Wheel Duel &amp; The Beast</h4>
+              <p>Cockpit re-entry, visor lock, 330 km/h duel against Mercedes F1 with blinding skidplate sparks, culminating in the driver physically riding the charging Red Bull down the asphalt straight.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 2: Custom LoRA Face Training -->
+        <div class="deepdive-phase-section">
+          <div class="phase-number-badge">PHASE 02</div>
+          <h3 class="phase-title">Character Consistency: Training Karan Kumar S as the F1 Driver</h3>
+          <p class="phase-body-text">
+            The primary hurdle in commercial generative filmmaking is <strong>character face persistence across radical lighting shifts and camera angles</strong>. Standard text-to-video tools hallucinate random faces between cuts. To guarantee that Karan Kumar S was recognizable in the cockpit under aggressive red and blue track emergency lighting:
+          </p>
+          <div class="pipeline-tech-diagram">
+            <div class="diagram-step">
+              <div class="step-icon">📸</div>
+              <h4>1. Dataset Curation</h4>
+              <p>35 high-resolution 1024&times;1024 studio portraits of Karan Kumar S across neutral, intense, and profile angles.</p>
+            </div>
+            <div class="diagram-connector">&rarr;</div>
+            <div class="diagram-step">
+              <div class="step-icon">🧠</div>
+              <h4>2. Kohya_ss SDXL Training</h4>
+              <p>Trained using LoRA rank 64, alpha 32, AdamW8bit optimizer for 2,400 steps with precise token tagging <code>ohwx_karankumar driver</code>.</p>
+            </div>
+            <div class="diagram-connector">&rarr;</div>
+            <div class="diagram-step">
+              <div class="step-icon">🪖</div>
+              <h4>3. Cockpit Mask Inpainting</h4>
+              <p>Integrated inside the carbon-fiber helmet and Nomex balaclava in ComfyUI, locking facial contours while synthesizing helmet reflections.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase 3: Scene-by-Scene Keyframe Architecture -->
+        <div class="deepdive-phase-section">
+          <div class="phase-number-badge">PHASE 03</div>
+          <h3 class="phase-title">7-Scene Keyframe Engineering &amp; Prompt Parameters</h3>
+          <p class="phase-body-text">
+            Each scene was anchored by a master keyframe synthesized at 1280&times;720 HD with deterministic seed locking before video diffusion:
+          </p>
+
+          <div class="scenes-breakdown-container">
+            <!-- Scene 1 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_01.jpg" alt="Scene 01 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_01.jpg">
+                <span class="scene-timestamp-pill">Frame 01 &bull; 0:00 - 0:04</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 01: Breakdown &amp; Gravel Desolation</span>
+                  <span class="scene-camera-tag">Wide Pan &bull; Arri Alexa 35mm</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>Cinematic 35mm film still of a stranded Formula 1 racecar on the outer asphalt curb, smoke billowing gently from the rear engine cowl, dusk twilight purple-orange gradient sky, racing driver in dark suit walking away into the gravel trap, melancholic cinematic atmosphere, photorealistic 8k, shallow depth of field, anamorphic streak glare.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> Establishes vulnerability. Eliminates perfectionism and engages viewers by challenging expectations of a racing ad.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 2 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_02.jpg" alt="Scene 02 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_02.jpg">
+                <span class="scene-timestamp-pill">Frame 02 &bull; 0:04 - 0:08</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 02: Pit Crew Catalyst — The Cold Chest</span>
+                  <span class="scene-camera-tag">Low-Angle Dolly In &bull; 50mm Prime</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>Low-angle shot of Red Bull Racing pit crew hands holding an industrial brushed aluminum ice chest open on pitlane tarmac, dense billowing sub-zero cryogenic dry-ice vapor swirling upwards, ice cubes and chilled aluminum beverage cans inside, neon blue and warm tungsten stadium backlighting, intense volumetric mist.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> Introduces the product not as a passive soda can, but as high-performance fuel delivered with cryogenic medical urgency.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 3 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_03.jpg" alt="Scene 03 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_03.jpg">
+                <span class="scene-timestamp-pill">Frame 03 &bull; 0:08 - 0:13</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 03: Macro Can Tab Ignition</span>
+                  <span class="scene-camera-tag">Extreme Macro 100mm &bull; 1000fps High-Speed</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>Extreme macro 100mm close-up of a silver beverage can pull tab being cracked open, high-speed fluid dynamics, pressurized carbonated micro-droplets erupting into the air, frozen fluid splash, studio rim lighting illuminating water beads on brushed metallic rim, crisp typographic livery, 8k resolution.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> Micro-kinetic sound-and-visual punch. The acoustic crack synchronizes with an explosive bass drop.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 4 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_04.jpg" alt="Scene 04 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_04.jpg">
+                <span class="scene-timestamp-pill">Frame 04 &bull; 0:13 - 0:17</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 04: Sensory Ingestion (First-Person POV)</span>
+                  <span class="scene-camera-tag">First-Person POV &bull; 24mm Wide Anamorphic</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>First-person POV looking directly into the open rim of a chilled Red Bull can held by a racing gloved hand, condensation beads glistening, glowing racetrack pit exit in soft blurred bokeh background, twilight blue hour ambient sky, intense thirst-quenching visual cue, cinematic lighting.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> First-person immersion places the viewer directly in the driver&rsquo;s physical body immediately prior to revitalization.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 5 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_05.jpg" alt="Scene 05 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_05.jpg">
+                <span class="scene-timestamp-pill">Frame 05 &bull; 0:17 - 0:21</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 05: Cockpit Awakening &amp; LoRA Driver Persistence</span>
+                  <span class="scene-camera-tag">Cockpit Halo Cam &bull; 35mm Prime</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>Tight halo cockpit camera shot of Formula 1 driver ohwx_karankumar seated in Red Bull Racing cockpit, helmet visor partially raised showing intense focused eyes, Nomex fireproof balaclava, red and blue electronic HUD telemetry reflecting in helmet visor, carbon fiber steering wheel with glowing digital RPM shift lights, ultra-realistic skin texture, 8k.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> The pivotal LoRA validation frame. Demonstrates precise facial likeness of Karan Kumar S integrated seamlessly with authentic F1 cockpit geometry.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 6 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_06.jpg" alt="Scene 06 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_06.jpg">
+                <span class="scene-timestamp-pill">Frame 06 &bull; 0:21 - 0:26</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 06: Midnight Duel at 330 KM/H</span>
+                  <span class="scene-camera-tag">Side Tracking Chaser &bull; 85mm High Speed</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>High-speed tracking shot alongside two Formula 1 racecars dueling wheel-to-wheel at 330 km/h under Singapore night circuit stadium floodlights, dark navy Red Bull car executing tight inside overtake, titanium underfloor skid blocks producing violent cascade of orange sparks against damp asphalt, camera shutter motion blur, cinematic realism, 8k.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> Maximum kinetic energy. Titanium skidblock sparks validate physics simulation and satisfy high-speed commercial standards.
+                </div>
+              </div>
+            </div>
+
+            <!-- Scene 7 -->
+            <div class="scene-item-card">
+              <div class="scene-item-thumb">
+                <img src="/ai_creation/redbull/frames/frame_07.jpg" alt="Scene 07 Keyframe" class="zoomable-asset" data-zoom-src="/ai_creation/redbull/frames/frame_07.jpg">
+                <span class="scene-timestamp-pill">Frame 07 &bull; 0:26 - 0:32</span>
+              </div>
+              <div class="scene-item-details">
+                <div class="scene-top-meta">
+                  <span class="scene-title-text">Scene 07: Climax — Riding The Beast</span>
+                  <span class="scene-camera-tag">Low Dutch Angle &bull; 28mm Epic</span>
+                </div>
+                <div class="scene-prompt-box">
+                  <span class="prompt-label">PRIMARY PROMPT:</span>
+                  <code>Surreal epic commercial climax shot of a Formula 1 racing driver in dark navy racing suit physically riding on the back of a titanic muscular dark navy and red raging bull galloping at full sprint down the main straight of a racing circuit, glowing golden horns, molten sparks and asphalt debris flying from galloping hooves, roaring crowd under grandstand searchlights, triumphant cinematic finish line, 8k masterpiece.</code>
+                </div>
+                <div class="scene-notes-box">
+                  <strong>Creative Rationale:</strong> The definitive brand metaphor made tangible. Elevates the commercial from motorsport documentary into an iconic cultural statement.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Phase 4 & 5 Grid -->
+        <div class="phase-two-col-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 36px;">
+          <div class="deepdive-phase-section" style="margin-top: 0;">
+            <div class="phase-number-badge">PHASE 04</div>
+            <h3 class="phase-title">Motion Diffusion &amp; Frame Interpolation</h3>
+            <p class="phase-body-text">
+              Keyframes were ingested into <strong>Kling 1.5 Pro</strong> and <strong>Wan 2.1</strong> with customized trajectory curves (pan left 1.2, zoom 1.8, tilt down 0.4). Output renders were upscaled and smoothed using <strong>Topaz Video AI 5K Chronos</strong>, converting 24fps diffusion outputs into crystal-clear 60fps broadcast fidelity.
+            </p>
+          </div>
+          <div class="deepdive-phase-section" style="margin-top: 0;">
+            <div class="phase-number-badge">PHASE 05</div>
+            <h3 class="phase-title">Neural Foley &amp; V10 Audio Scoring</h3>
+            <p class="phase-body-text">
+              Sound delivers 50% of cinematic immersion. We engineered a multi-track acoustic score combining authentic naturally aspirated 19,000 RPM V10 engine recordings, sub-zero cryogenic dry ice hisses, aluminum pull-tab snaps, and deep sub-bass cinematic heartbeat pulses synthesized via <strong>ElevenLabs Sound Effects</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Next Project Navigation Footer -->
+        <div class="case-study-nav-footer" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid var(--canvas-paper-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <a href="ai-creation.html" class="btn-subtle" style="text-decoration: none;">
+            <span>&larr; Explore Full AI Creation Atelier</span>
+          </a>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="case-studies.html?deck=rufus" class="btn-primary-header" style="text-decoration: none;">
+              <span>Next: Amazon Rufus AI Shopping Audit</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-stage">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-media-wrapper">
+        <img src="" alt="Enlarged Visual" class="lightbox-img" id="lightboxImg">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toastText"></span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div class="footer-col-brand">
+          <span class="footer-logo">KARAN KUMAR S</span>
+          <p class="footer-desc">AI Creative Strategist &amp; E-Commerce Visual Designer &bull; Madurai, Tamil Nadu &bull; Worldwide</p>
+        </div>
+        <div class="footer-col-links">
+          <a href="index.html">Home</a>
+          <a href="ai-creation.html">AI Creation Atelier</a>
+          <a href="case-studies.html">Case Studies &amp; Research</a>
+          <a href="ugc-videos.html">UGC Video Vault</a>
+          <a href="index.html#contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 Karan Kumar S. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

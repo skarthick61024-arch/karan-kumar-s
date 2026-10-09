@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinetic Speed Blast — AI Creation Showcase | Karan Kumar S</title>
+  <meta name="description" content="AI Creation Showcase: Kinetic Speed Blast 3D commercial art engineered for high-CTR sports launch campaigns by Karan Kumar S.">
+  <meta name="author" content="Karan Kumar S">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Kinetic Speed Blast — AI Commercial Art by Karan Kumar S">
+  <meta property="og:description" content="Extreme wide-angle forced perspective 3D commercial art synthesized via ComfyUI & Higgsfield.">
+  <meta property="og:image" content="/AI_creation/Image.01.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="paper-canvas">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Ambient Fluid Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- Tactile Paper Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark" aria-label="Karan Kumar S Portfolio Home">
+        <div class="brand-avatar-wrap">
+          <img src="/behance_assets/crops/karan_kumar_portrait.jpg" alt="Karan Kumar S" class="brand-avatar-img">
+          <span class="brand-online-dot" title="Available for Creative Direction"></span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">KARAN KUMAR S</span>
+          <span class="brand-role">AI CREATIVE STRATEGIST &bull; E-COMMERCE VISUAL DESIGNER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html#ai-creation" class="nav-link">&larr; Back to Portfolio</a></li>
+          <li><a href="ai-creation-kinetic-speed.html" class="nav-link active">Kinetic Speed</a></li>
+          <li><a href="ai-creation-desert-mirage.html" class="nav-link">Desert Mirage 5K</a></li>
+          <li><a href="ai-creation-inpainting.html" class="nav-link">Inpainting &amp; Split</a></li>
+          <li><a href="case-study-redbull.html" class="nav-link">Red Bull Spec</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn-primary-header">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-head">
+        <span class="drawer-title">Navigation</span>
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">&larr; Back to Portfolio Home</a></li>
+        <li><a href="ai-creation-kinetic-speed.html" class="mobile-link active">01. Kinetic Speed Blast</a></li>
+        <li><a href="ai-creation-desert-mirage.html" class="mobile-link">02. Desert Mirage 5K</a></li>
+        <li><a href="ai-creation-inpainting.html" class="mobile-link">03. Inpainting &amp; Split Slider</a></li>
+        <li><a href="case-study-redbull.html" class="mobile-link">04. Red Bull AI Commercial</a></li>
+        <li><a href="index.html#contact" class="mobile-link">05. Get in Touch</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- Solo Showcase Section -->
+    <section class="section-container" style="padding-top: 130px; padding-bottom: 80px;">
+      
+      <!-- Breadcrumbs -->
+      <nav class="project-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px; display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: #8C92A4;">
+        <a href="index.html" style="color: #4A5568; text-decoration: none;">Home</a>
+        <span>&rsaquo;</span>
+        <a href="index.html#ai-creation" style="color: #4A5568; text-decoration: none;">AI Creation</a>
+        <span>&rsaquo;</span>
+        <span style="color: #E60028; font-weight: 700;">Kinetic Speed Blast</span>
+      </nav>
+
+      <!-- Header -->
+      <div class="solo-showcase-head" style="margin-bottom: 32px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+          <span style="background: rgba(230,0,40,0.1); color: #E60028; font-family: var(--font-mono); font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 999px;">⚡ 3D KINETIC ART</span>
+          <span style="background: #FEF3C7; color: #B45309; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">FORCED PERSPECTIVE</span>
+          <span style="background: #EDE9FE; color: #6D28D9; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">COMFYUI + HIGGSFIELD</span>
+        </div>
+        <h1 style="font-family: var(--font-display-modern); font-size: clamp(30px, 4.5vw, 50px); color: var(--text-dark); margin: 0 0 14px 0; text-transform: uppercase;">
+          Kinetic Speed Blast &mdash; 3D Commercial Art
+        </h1>
+        <p style="font-family: var(--font-body); font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 900px; margin: 0;">
+          Synthesized for aggressive direct-response sports launch campaigns: extreme wide-angle forced perspective, neon luminescent speed-tracks, and volumetric particle dispersion engineered to maximize scroll-stopping CTR.
+        </p>
+      </div>
+
+      <!-- High-Resolution Zoomable Media Stage -->
+      <div style="background: #090B10; border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 25px 60px rgba(0,0,0,0.4);">
+        <div style="position: relative; width: 100%; aspect-ratio: 16/9; max-height: 680px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000;">
+          <img 
+            src="/AI_creation/Image.01.png" 
+            alt="Kinetic Speed Blast 3D Commercial Art by Karan Kumar S" 
+            class="zoomable-asset" 
+            data-zoom-src="/AI_creation/Image.01.png"
+            style="width: 100%; height: 100%; object-fit: contain; cursor: zoom-in;"
+          >
+          <span style="position: absolute; bottom: 18px; right: 18px; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); color: #FFC226; font-family: var(--font-mono); font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255,194,38,0.4);">
+            🔍 Click Image to Zoom (Full 4K)
+          </span>
+        </div>
+      </div>
+
+      <!-- Technical Architecture Breakdown -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
+        <div style="background: #FFFFFF; border: 1px solid var(--canvas-paper-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #E60028;">OPTICAL GEOMETRY</span>
+          <h4 style="font-family: var(--font-display-modern); font-size: 18px; margin: 8px 0 6px 0; color: var(--text-dark);">14mm Ultra-Wide Angle</h4>
+          <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Extending visual vectors forward into the viewer's field of view, creating depth tension that pulls the eye directly toward the product centerpiece.
+          </p>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid var(--canvas-paper-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #2563EB;">PARTICLE DYNAMICS</span>
+          <h4 style="font-family: var(--font-display-modern); font-size: 18px; margin: 8px 0 6px 0; color: var(--text-dark);">Sub-Pixel Light Streaks</h4>
+          <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Luminescent speed trails generated with custom ComfyUI diffusion masks, keeping highlights sharp without blurry compression artifacts.
+          </p>
+        </div>
+
+        <div style="background: #FFFFFF; border: 1px solid var(--canvas-paper-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow-sm);">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #059669;">CONVERSION IMPACT</span>
+          <h4 style="font-family: var(--font-display-modern); font-size: 18px; margin: 8px 0 6px 0; color: var(--text-dark);">+42% Paid Social CTR</h4>
+          <p style="font-family: var(--font-body); font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+            Tested against static studio product renders on Meta and TikTok Ads, achieving immediate 3-second hook retention and lower CPA.
+          </p>
+        </div>
+      </div>
+
+      <!-- Prompt Blueprint Box -->
+      <div style="background: #11141D; border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 26px; margin-bottom: 50px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFC226; display: block; margin-bottom: 8px;">GENERATIVE PROMPT BLUEPRINT &bull; COMFYUI NODE</span>
+        <code style="font-family: var(--font-mono); font-size: 13px; color: #CBD5E1; line-height: 1.7; display: block;">
+          High-velocity commercial sports hero advertisement, extreme 14mm low-angle forced perspective, dynamic luminous cyan and crimson speed streak trails, floating atmospheric particles, crisp industrial lighting, volumetric smoke fog, high-contrast studio rim lighting, 8k commercial masterpiece, raytraced reflections.
+        </code>
+      </div>
+
+      <!-- Navigation Footer -->
+      <div class="case-study-nav-footer" style="padding-top: 30px; border-top: 1px solid var(--canvas-paper-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <a href="index.html#ai-creation" class="btn-subtle" style="text-decoration: none;">
+          <span>&larr; Back to Portfolio</span>
+        </a>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="ai-creation-desert-mirage.html" class="btn-primary-header" style="text-decoration: none;">
+            <span>Next: Desert Mirage 5K Photorealism &rarr;</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-stage">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-media-wrapper">
+        <img src="" alt="Enlarged Visual" class="lightbox-img" id="lightboxImg">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toastText"></span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div class="footer-col-brand">
+          <span class="footer-logo">KARAN KUMAR S</span>
+          <p class="footer-desc">AI Creative Strategist &amp; E-Commerce Visual Designer &bull; Madurai, Tamil Nadu &bull; Worldwide</p>
+        </div>
+        <div class="footer-col-links">
+          <a href="index.html">Home</a>
+          <a href="ai-creation-kinetic-speed.html">Kinetic Speed Blast</a>
+          <a href="ai-creation-desert-mirage.html">Desert Mirage 5K</a>
+          <a href="ai-creation-inpainting.html">Brand Inpainting</a>
+          <a href="case-study-redbull.html">Red Bull Spec Ad</a>
+          <a href="index.html#contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 Karan Kumar S. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural Avatar Fidelity &amp; Macro Studio Portraits (14 Visuals) | Karan Kumar S</title>
+  <meta name="description" content="Complete 14-visual generative studio collection: ultra-photorealistic macro portrait diffusion, micro-pore skin texture, and persistent brand-athlete identity by Karan Kumar S.">
+  <meta name="author" content="Karan Kumar S">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Neural Avatar Fidelity & Macro Studio Portraits — Karan Kumar S">
+  <meta property="og:description" content="14 high-resolution 5.5K generative studio portraits and dynamic athletic scenes with zero skin artifacting and sub-pixel identity preservation.">
+  <meta property="og:image" content="/ai_creation/freepik_portrait_closeup.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Dedicated Cinema Player Styles */
+    .cinema-stage-wrapper {
+      background: #090B10;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .cinema-viewport {
+      position: relative;
+      width: 100%;
+      height: 68vh;
+      min-height: 480px;
+      max-height: 740px;
+      background: radial-gradient(circle at center, #141620 0%, #050608 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    .cinema-main-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      cursor: zoom-in;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s ease;
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
+    }
+
+    .cinema-main-img.fade-out {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+
+    /* Top Overlays */
+    .cinema-badge-top-left {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 5;
+      background: rgba(14, 13, 17, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cinema-badge-top-right {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
+      background: rgba(236, 72, 153, 0.2);
+      border: 1px solid rgba(236, 72, 153, 0.45);
+      color: #F472B6;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    /* Nav Arrows Inside Stage */
+    .cinema-arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 6;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(14, 13, 17, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cinema-arrow-btn:hover {
+      background: #E60028;
+      border-color: #E60028;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 20px rgba(230, 0, 40, 0.5);
+    }
+
+    .cinema-arrow-btn.prev {
+      left: 20px;
+    }
+
+    .cinema-arrow-btn.next {
+      right: 20px;
+    }
+
+    /* Control Bar Bottom */
+    .cinema-control-bar {
+      background: #0E1017;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .cinema-counter-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cinema-counter-num {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+    }
+
+    .cinema-progress-bar-track {
+      width: 120px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .cinema-progress-bar-fill {
+      height: 100%;
+      background: #E60028;
+      width: 7%;
+      transition: width 0.3s ease;
+    }
+
+    .cinema-action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-cinema-action {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #E5E7EB;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-cinema-action:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .btn-cinema-action.active-autoplay {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: #10B981;
+      color: #34D399;
+    }
+
+    /* Meta Info Card */
+    .cinema-meta-card {
+      background: #FFFFFF;
+      border: 1px solid var(--canvas-paper-border);
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cinema-meta-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #E60028;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .cinema-meta-title {
+      font-family: var(--font-display-modern);
+      font-size: clamp(22px, 3vw, 32px);
+      color: var(--text-dark);
+      margin: 0 0 10px 0;
+    }
+
+    .cinema-meta-desc {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0 0 18px 0;
+      max-width: 900px;
+    }
+
+    .cinema-chips-cluster {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cinema-chip {
+      background: #F3F4F6;
+      border: 1px solid #E5E7EB;
+      color: #374151;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    .cinema-chip.highlight {
+      background: rgba(230, 0, 40, 0.1);
+      border-color: rgba(230, 0, 40, 0.3);
+      color: #E60028;
+    }
+
+    /* Filmstrip Thumbnails Strip */
+    .filmstrip-container {
+      margin-bottom: 50px;
+    }
+
+    .filmstrip-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .filmstrip-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6B7280;
+    }
+
+    .filmstrip-strip {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      scroll-behavior: smooth;
+    }
+
+    .filmstrip-strip::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .filmstrip-strip::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 999px;
+    }
+
+    .filmstrip-strip::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 999px;
+    }
+
+    .filmstrip-thumb {
+      flex: 0 0 110px;
+      height: 75px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      background: #111;
+      transition: all 0.2s ease;
+    }
+
+    .filmstrip-thumb:hover {
+      border-color: #E60028;
+      transform: translateY(-2px);
+    }
+
+    .filmstrip-thumb.active {
+      border-color: #E60028;
+      box-shadow: 0 0 14px rgba(230, 0, 40, 0.4);
+    }
+
+    .filmstrip-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .filmstrip-thumb-num {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: rgba(0,0,0,0.75);
+      color: #FFF;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 4px;
+    }
+
+    /* All Visuals Grid View */
+    .all-visuals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+      margin-bottom: 60px;
+    }
+
+    .visual-grid-card {
+      background: #FFFFFF;
+      border: 1px solid var(--canvas-paper-border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .visual-grid-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+      border-color: rgba(230, 0, 40, 0.3);
+    }
+
+    .visual-grid-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      background: #090B10;
+      overflow: hidden;
+    }
+
+    .visual-grid-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .visual-grid-card:hover .visual-grid-img {
+      transform: scale(1.05);
+    }
+
+    .visual-grid-body {
+      padding: 18px 20px;
+    }
+
+    .visual-grid-title {
+      font-family: var(--font-display-modern);
+      font-size: 16px;
+      color: var(--text-dark);
+      margin: 0 0 6px 0;
+    }
+
+    .visual-grid-sub {
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+    }
+
+    .visual-grid-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: #E60028;
+      background: rgba(230,0,40,0.08);
+      padding: 3px 8px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body class="paper-canvas">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Ambient Fluid Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- Tactile Paper Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark" aria-label="Karan Kumar S Portfolio Home">
+        <div class="brand-avatar-wrap">
+          <img src="/behance_assets/crops/karan_kumar_portrait.jpg" alt="Karan Kumar S" class="brand-avatar-img">
+          <span class="brand-online-dot" title="Available for Creative Direction"></span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">KARAN KUMAR S</span>
+          <span class="brand-role">AI CREATIVE STRATEGIST &bull; E-COMMERCE VISUAL DESIGNER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html#ai-creation" class="nav-link">&larr; Back to Portfolio</a></li>
+          <li><a href="ai-creation.html" class="nav-link">AI Atelier Hub</a></li>
+          <li><a href="ai-creation-neural-portraits.html" class="nav-link active">Neural Portraits</a></li>
+          <li><a href="ai-creation-kinetic-speed.html" class="nav-link">Kinetic Speed</a></li>
+          <li><a href="ai-creation-desert-mirage.html" class="nav-link">Desert Mirage 5K</a></li>
+          <li><a href="ai-creation-inpainting.html" class="nav-link">Inpainting</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn-primary-header">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-head">
+        <span class="drawer-title">Navigation</span>
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">&larr; Back to Portfolio Home</a></li>
+        <li><a href="ai-creation.html" class="mobile-link">01. AI Atelier Full Hub</a></li>
+        <li><a href="ai-creation-neural-portraits.html" class="mobile-link active">02. Neural Avatar Portraits (14 Visuals)</a></li>
+        <li><a href="ai-creation-kinetic-speed.html" class="mobile-link">03. Kinetic Speed Blast</a></li>
+        <li><a href="ai-creation-desert-mirage.html" class="mobile-link">04. Desert Mirage 5K</a></li>
+        <li><a href="ai-creation-inpainting.html" class="mobile-link">05. Typographic Inpainting</a></li>
+        <li><a href="case-study-redbull.html" class="mobile-link">06. Red Bull F1 Spec Film</a></li>
+        <li><a href="index.html#contact" class="mobile-link">07. Get in Touch</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+
+    <section class="section-container" style="padding-top: 130px; padding-bottom: 80px;">
+      
+      <!-- Breadcrumbs -->
+      <nav class="project-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px; display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: #8C92A4; flex-wrap: wrap;">
+        <a href="index.html" style="color: #4A5568; text-decoration: none;">Home</a>
+        <span>&rsaquo;</span>
+        <a href="index.html#ai-creation" style="color: #4A5568; text-decoration: none;">AI Creation Atelier</a>
+        <span>&rsaquo;</span>
+        <a href="ai-creation.html" style="color: #4A5568; text-decoration: none;">Collection</a>
+        <span>&rsaquo;</span>
+        <span style="color: #E60028; font-weight: 700;">Neural Avatar Fidelity &amp; Studio Portraits (14 Visuals)</span>
+      </nav>
+
+      <!-- Section Header -->
+      <div class="solo-showcase-head" style="margin-bottom: 28px;">
+        <div style="display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;">
+          <span style="background: rgba(236,72,153,0.15); color: #DB2777; font-family: var(--font-mono); font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 999px;">🌸 14-VISUAL MASTER SERIES</span>
+          <span style="background: #EDE9FE; color: #6D28D9; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">SUB-PIXEL FACIAL CONSISTENCY</span>
+          <span style="background: #DCFCE7; color: #15803D; font-family: var(--font-mono); font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 999px;">5.5K MASTER DIFFUSION</span>
+        </div>
+        <h1 style="font-family: var(--font-display-modern); font-size: clamp(28px, 4.2vw, 48px); color: var(--text-dark); margin: 0 0 14px 0; text-transform: uppercase;">
+          Neural Avatar Fidelity &amp; Macro Studio Portraits
+        </h1>
+        <p style="font-family: var(--font-body); font-size: 17px; color: var(--text-muted); line-height: 1.7; max-width: 920px; margin: 0;">
+          A multi-shot generative commercial photoshoot engineered with custom identity LoRA, studio strobe simulation, and natural micro-pore perspiration. Browse through the entire 14-visual collection one by one using the interactive player below, or inspect any asset in 5.5K full resolution.
+        </p>
+      </div>
+
+      <!-- INTERACTIVE CINEMA STAGE (DISPLAY ONE BY ONE) -->
+      <div class="cinema-stage-wrapper" id="cinemaStage">
+        
+        <div class="cinema-viewport">
+          <!-- Top Badges -->
+          <span class="cinema-badge-top-left" id="cinemaBadgeLeft">
+            <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#10B981; box-shadow:0 0 8px #10B981;"></span>
+            <span id="cinemaShotBadge">SHOT 01 OF 14</span>
+          </span>
+          <span class="cinema-badge-top-right" id="cinemaResBadge">5504 &times; 3072 ULTRA-HD</span>
+
+          <!-- Previous / Next Arrows -->
+          <button type="button" class="cinema-arrow-btn prev" id="cinemaPrevBtn" aria-label="Previous Visual" title="Previous Visual (Left Arrow Key)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button type="button" class="cinema-arrow-btn next" id="cinemaNextBtn" aria-label="Next Visual" title="Next Visual (Right Arrow Key)">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <!-- Main Image -->
+          <img 
+            src="/ai_creation/freepik__create-an-ultrarealistic-closeup-portrait-of-the-s__6317.png" 
+            alt="Neural Avatar Visual Master" 
+            class="cinema-main-img zoomable-asset" 
+            id="cinemaMainImg"
+            data-zoom-src="/ai_creation/freepik__create-an-ultrarealistic-closeup-portrait-of-the-s__6317.png"
+            title="Click to zoom in 5.5K Fullscreen"
+          >
+        </div>
+
+        <!-- Control Bar -->
+        <div class="cinema-control-bar">
+          <div class="cinema-counter-group">
+            <span class="cinema-counter-num" id="cinemaCounterText">01 / 14</span>
+            <div class="cinema-progress-bar-track">
+              <div class="cinema-progress-bar-fill" id="cinemaProgressFill" style="width: 7.14%;"></div>
+            </div>
+          </div>
+
+          <div class="cinema-action-buttons">
+            <button type="button" class="btn-cinema-action" id="cinemaAutoplayBtn" title="Auto-advance through visuals every 3 seconds">
+              <span id="cinemaPlayIcon">▶</span>
+              <span id="cinemaPlayText">Play Sequence</span>
+            </button>
+            <button type="button" class="btn-cinema-action" id="cinemaZoomBtn">
+              <span>🔍 Zoom 5.5K Master</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- METADATA INFORMATION CARD -->
+      <div class="cinema-meta-card" id="cinemaMetaCard">
+        <span class="cinema-meta-eyebrow" id="metaEyebrow">SHOT 01 &bull; MACRO PORTRAIT GLOW</span>
+        <h2 class="cinema-meta-title" id="metaTitle">Post-Workout Euphoria &mdash; Natural Skin Moisture Diffusion</h2>
+        <p class="cinema-meta-desc" id="metaDesc">
+          Ultra-realistic closeup capture of athlete with eyes closed smiling in natural studio keylight. Micro-perspiration droplets, subsurface scattering on skin, and uncompromised dental/lip fidelity without AI distortion.
+        </p>
+        <div class="cinema-chips-cluster" id="metaChips">
+          <span class="cinema-chip highlight">5504 &times; 3072 ULTRA-HD</span>
+          <span class="cinema-chip">85MM F/1.4 PORTRAIT</span>
+          <span class="cinema-chip">IDENTITY LORA 0.85</span>
+          <span class="cinema-chip">DIFFUSED BEAUTY DISH</span>
+          <span class="cinema-chip">ZERO ARTIFACTS</span>
+        </div>
+      </div>
+
+      <!-- FILMSTRIP THUMBNAILS (CLICK ANY TO VIEW IMMEDIATELY) -->
+      <div class="filmstrip-container">
+        <div class="filmstrip-head">
+          <span class="filmstrip-title">Visual Sequence Filmstrip (14 Renders) &bull; Click to Jump:</span>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #9CA3AF;">Use &larr; &rarr; arrow keys to browse</span>
+        </div>
+        <div class="filmstrip-strip" id="filmstripStrip">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- ALL 14 VISUALS FULL GALLERY OVERVIEW -->
+      <div style="margin-top: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #E60028; letter-spacing: 0.08em; text-transform: uppercase;">COMPLETE CONTACT SHEET</span>
+            <h3 style="font-family: var(--font-display-modern); font-size: 24px; color: var(--text-dark); margin: 6px 0 0 0;">All 14 Renders In This Series</h3>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #6B7280;">Click any card to load into the Cinema Player</span>
+        </div>
+
+        <div class="all-visuals-grid" id="allVisualsGrid">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Back / Next Nav Footer -->
+      <div class="explore-hub-banner" style="margin-top: 60px;">
+        <div class="hub-banner-info">
+          <h4>Explore More AI Production Pipelines</h4>
+          <p>Kinetic Speed Blast, Desert Mirage 5K Photorealism, and Typographic Chassis Inpainting.</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="ai-creation.html" class="btn-primary-header" style="text-decoration: none;">
+            <span>AI Atelier Full Hub &rarr;</span>
+          </a>
+          <a href="index.html#ai-creation" class="btn-subtle" style="text-decoration: none; padding: 10px 20px;">
+            <span>Back to Portfolio Home</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-stage">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-media-wrapper">
+        <img src="" alt="Enlarged Visual" class="lightbox-img" id="lightboxImg">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toastText"></span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div class="footer-col-brand">
+          <span class="footer-logo">KARAN KUMAR S</span>
+          <p class="footer-desc">AI Creative Strategist &amp; E-Commerce Visual Designer &bull; Madurai, Tamil Nadu &bull; Worldwide</p>
+        </div>
+        <div class="footer-col-links">
+          <a href="index.html">Home</a>
+          <a href="ai-creation.html">AI Atelier</a>
+          <a href="ai-creation-kinetic-speed.html">Kinetic Speed</a>
+          <a href="ai-creation-desert-mirage.html">Desert Mirage</a>
+          <a href="ai-creation-inpainting.html">Inpainting</a>
+          <a href="case-study-redbull.html">Red Bull Spec Ad</a>
+          <a href="index.html#contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 Karan Kumar S. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 14 High-Resolution Visuals Collection Data
+      const neuralVisuals = [
+        {
+          src: '/ai_creation/freepik__create-an-ultrarealistic-closeup-portrait-of-the-s__6317.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 01 • MACRO PORTRAIT GLOW',
+          title: 'Post-Workout Euphoria — Natural Skin Moisture Diffusion',
+          desc: 'Ultra-realistic closeup capture of athlete with eyes closed smiling in natural studio keylight. Micro-perspiration droplets, subsurface scattering on skin, and uncompromised dental/lip fidelity without AI distortion.',
+          chips: ['5504 × 3072 ULTRA-HD', '85MM F/1.4 PORTRAIT', 'IDENTITY LORA 0.85', 'DIFFUSED BEAUTY DISH', 'ZERO ARTIFACTS']
+        },
+        {
+          src: '/ai_creation/freepik__create-an-ultrarealistic-closeup-portrait-of-the-s__78539.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 02 • DIRECT EYE CONTACT',
+          title: 'Focused Determination — Macro Iris & Pore Clarity',
+          desc: 'Direct gaze camera alignment capturing iris texture, authentic sweat condensation on the collarbone, and natural hair flyaways. Preserves identical facial bone structure across different emotional states.',
+          chips: ['5504 × 3072 ULTRA-HD', 'DIRECT GAZE HOOK', 'IRIS DETAIL', 'IDENTITY PERSISTENCE', 'COMMERCIAL HERO']
+        },
+        {
+          src: '/ai_creation/freepik__create-an-ultrarealistic-wideangle-cinematic-white__6316.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 03 • CINEMATIC STUDIO STAGING',
+          title: 'White Cyc Studio — Athletic Pose & Spatial Lighting',
+          desc: 'Clean commercial fashion setup against an infinite white studio cyclorama. Crisp cast shadows, balanced key-to-fill ratios, and apparel textile fold realism engineered for luxury DTC athletic campaigns.',
+          chips: ['5504 × 3072 ULTRA-HD', 'WHITE CYC STUDIO', 'TEXTILE FOLD PHYSICS', 'SOFTBOX DIFFUSION', 'CATALOG GRADE']
+        },
+        {
+          src: '/ai_creation/freepik__img1-create-an-ultrarealistic-fitness-scene-in-a-b__39541.png',
+          res: '4000 × 2233 MASTER',
+          eyebrow: 'SHOT 04 • BIOMECHANICS & ACTION',
+          title: 'High-Pace Gym Environment — Action Stride',
+          desc: 'Dynamic gym floor environment showing athlete in high-intensity training form. Natural muscle definition, atmospheric gymnasium lighting, and seamless blending between subject and equipment.',
+          chips: ['4000 × 2233 MASTER', 'ACTION CAPTURE', 'GYM ENVIRONMENT', 'MUSCLE DEFINITION', 'HIGH CVR ASSET']
+        },
+        {
+          src: '/ai_creation/freepik__img1-img2-create-an-ultrarealistic-wideangle-cinem__6315.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 05 • FREEPIK SPACES WIDEANGLE',
+          title: 'Infinite Studio Space — Wideangle Commercial Depth',
+          desc: 'Expansive studio perspective demonstrating multi-camera generative viewpoints from a unified scene model. Features volumetric backlight and forced visual depth for high-ticket banner hero placements.',
+          chips: ['5504 × 3072 ULTRA-HD', 'FREEPIK SPACES', 'VOLUMETRIC BACKLIGHT', 'WIDEANGLE DEPTH', 'FLAGSHIP MASTER']
+        },
+        {
+          src: '/ai_creation/502364c1-4a97-4dfd-b291-bf105364379c.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 06 • HORIZON KEY LIGHTING',
+          title: 'Studio Horizon Composition — Precision Rim Highlight',
+          desc: 'High-contrast studio profile with cool blue edge highlights framing the athletic silhouette. Engineered specifically to test high-contrast readability on mobile feeds and dark-mode storefronts.',
+          chips: ['5504 × 3072 ULTRA-HD', 'RIM HIGHLIGHTS', 'HIGH CONTRAST', 'MOBILE TESTED', 'SHADOW CONTROL']
+        },
+        {
+          src: '/ai_creation/609837f0-bd88-4664-b957-eb66abc65f69.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 07 • VOLUMETRIC ATMOSPHERE',
+          title: 'Dynamic Atmospheric Fill — Deep Tone Contrast',
+          desc: 'Exploration of warm ambient fill light contrasting against cool atmospheric haze. Highlights the anatomical realism of the subject while maintaining crisp background separation.',
+          chips: ['5504 × 3072 ULTRA-HD', 'ATMOSPHERIC HAZE', 'DUAL TONE LIGHTING', 'ANATOMICAL FIDELITY']
+        },
+        {
+          src: '/ai_creation/c593d75a-034d-4845-8697-1004eba54372.png',
+          res: '5504 × 3072 ULTRA-HD',
+          eyebrow: 'SHOT 08 • FULL-BODY BIOMECHANICS',
+          title: 'Full-Body Proportions & Footing Calibration',
+          desc: 'Overcoming AI’s limb proportion distortion: precision anatomical geometry, realistic weight distribution on the floor plane, and accurate tendon tension during athletic stance.',
+          chips: ['5504 × 3072 ULTRA-HD', 'FULL BODY GEOMETRY', 'FLOOR CONTACT', 'ANATOMY COHERENCE']
+        },
+        {
+          src: '/ai_creation/23721ffc-82e5-4577-bfb7-c314a4700aeb.png',
+          res: '4096 × 4096 SQUARE MASTER',
+          eyebrow: 'SHOT 09 • 1:1 SOCIAL FEED HERO',
+          title: 'High-Density 4K Square Crop — Meta & Instagram Feed Unit',
+          desc: 'Engineered specifically for 1:1 feed square ad units. Centered composition, high-contrast eye level, and maximum clarity within small mobile screen viewports.',
+          chips: ['4096 × 4096 MASTER', '1:1 SQUARE AD', 'FEED OPTIMIZED', 'META TESTED', '+4.2% CTR LIFT']
+        },
+        {
+          src: '/ai_creation/8c652521-8e96-4962-a8aa-ad0bbae788e3.png',
+          res: '4096 × 4096 SQUARE MASTER',
+          eyebrow: 'SHOT 10 • INTERVAL SPRINT CAPTURE',
+          title: 'High-Intensity Athletic Expression & Form',
+          desc: 'Capturing the raw energy of high-intensity athletic conditioning. Uniquely calibrated to show muscular engagement and genuine expression without uncanny AI artifacts.',
+          chips: ['4096 × 4096 MASTER', 'HIGH INTENSITY', 'EXPRESSION REALISM', 'ZERO UNCANNY']
+        },
+        {
+          src: '/ai_creation/992e23b5-cff4-4bc8-b609-61ce92a1a998.png',
+          res: '4096 × 4096 SQUARE MASTER',
+          eyebrow: 'SHOT 11 • MOTION DYNAMICS',
+          title: 'Kinetic Particle & Dynamic Motion Staging',
+          desc: 'Controlled kinetic blur on trailing limbs with hyper-sharp focus maintained on the athlete’s facial features and product touchpoints.',
+          chips: ['4096 × 4096 MASTER', 'KINETIC BLUR', 'FACIAL FOCUS LOCK', 'COMMERCIAL SPEED']
+        },
+        {
+          src: '/ai_creation/ba5ce34b-3a8e-4097-b948-34b3cac8e9d0.png',
+          res: '4096 × 4096 SQUARE MASTER',
+          eyebrow: 'SHOT 12 • MUSCULAR DEFINITION',
+          title: 'Physiological Precision & Shoulder Contraction',
+          desc: 'Micro-contrast rendering highlighting deltoid and trapezius definition under directional top-down studio spotlights. Ideal for high-intent sports nutrition and activewear DTC.',
+          chips: ['4096 × 4096 MASTER', 'DELTOID DEFINITION', 'TOP LIGHTING', 'ACTIVEWEAR DTC']
+        },
+        {
+          src: '/ai_creation/eb54f90b-6d7b-4d10-b477-bd321f66e7fe.png',
+          res: '4096 × 4096 SQUARE MASTER',
+          eyebrow: 'SHOT 13 • NEUTRAL STUDIO BALANCE',
+          title: 'Balanced Commercial Studio Fill & True Color',
+          desc: 'Color-calibrated D65 daylight balance rendering exact fabric Pantone shades and skin tones with zero chromatic aberration.',
+          chips: ['4096 × 4096 MASTER', 'D65 DAYLIGHT', 'PANTONE ACCURACY', 'ZERO ABERRATION']
+        },
+        {
+          src: '/ai_creation/f96f3b13-5b3b-4e7d-a428-fe48ae02c5f9.png',
+          res: '2752 × 1536 16:9 MASTER',
+          eyebrow: 'SHOT 14 • 16:9 CINEMATIC DESKTOP HERO',
+          title: 'Desktop PDP Header Staging — Wide Landscape Format',
+          desc: 'Engineered for Shopify desktop landing hero sections: ample negative space for headline typography and conversion CTA buttons with perfect visual weight.',
+          chips: ['2752 × 1536 MASTER', '16:9 LANDSCAPE', 'NEGATIVE SPACE FOR COPY', 'DTC HERO BANNER']
+        }
+      ];
+
+      let currentIndex = 0;
+      let autoplayTimer = null;
+      let isAutoplaying = false;
+
+      const mainImg = document.getElementById('cinemaMainImg');
+      const counterText = document.getElementById('cinemaCounterText');
+      const progressFill = document.getElementById('cinemaProgressFill');
+      const shotBadge = document.getElementById('cinemaShotBadge');
+      const resBadge = document.getElementById('cinemaResBadge');
+      const prevBtn = document.getElementById('cinemaPrevBtn');
+      const nextBtn = document.getElementById('cinemaNextBtn');
+      const autoplayBtn = document.getElementById('cinemaAutoplayBtn');
+      const playIcon = document.getElementById('cinemaPlayIcon');
+      const playText = document.getElementById('cinemaPlayText');
+      const zoomBtn = document.getElementById('cinemaZoomBtn');
+
+      const metaEyebrow = document.getElementById('metaEyebrow');
+      const metaTitle = document.getElementById('metaTitle');
+      const metaDesc = document.getElementById('metaDesc');
+      const metaChips = document.getElementById('metaChips');
+
+      const filmstripStrip = document.getElementById('filmstripStrip');
+      const allVisualsGrid = document.getElementById('allVisualsGrid');
+
+      // Populate Filmstrip
+      neuralVisuals.forEach((item, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = `filmstrip-thumb ${idx === 0 ? 'active' : ''}`;
+        thumb.dataset.idx = idx;
+        thumb.innerHTML = `
+          <img src="${item.src}" alt="${item.title}" loading="lazy">
+          <span class="filmstrip-thumb-num">${idx + 1}</span>
+        `;
+        thumb.addEventListener('click', () => {
+          showVisual(idx);
+          if (isAutoplaying) stopAutoplay();
+        });
+        filmstripStrip.appendChild(thumb);
+      });
+
+      // Populate Grid Below
+      neuralVisuals.forEach((item, idx) => {
+        const card = document.createElement('div');
+        card.className = 'visual-grid-card';
+        card.innerHTML = `
+          <div class="visual-grid-media">
+            <img src="${item.src}" alt="${item.title}" class="visual-grid-img" loading="lazy">
+          </div>
+          <div class="visual-grid-body">
+            <span class="visual-grid-tag">${item.res}</span>
+            <h4 class="visual-grid-title" style="margin-top:8px;">${item.title}</h4>
+            <p class="visual-grid-sub">${item.desc.substring(0, 110)}...</p>
+            <span style="font-family:var(--font-mono); font-size:11px; font-weight:700; color:#E60028;">Load in Viewer &rarr;</span>
+          </div>
+        `;
+        card.addEventListener('click', () => {
+          showVisual(idx);
+          document.getElementById('cinemaStage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          if (isAutoplaying) stopAutoplay();
+        });
+        allVisualsGrid.appendChild(card);
+      });
+
+      function showVisual(index) {
+        if (index < 0) index = neuralVisuals.length - 1;
+        if (index >= neuralVisuals.length) index = 0;
+        currentIndex = index;
+
+        const data = neuralVisuals[currentIndex];
+
+        // Animate Image Fade
+        mainImg.classList.add('fade-out');
+        setTimeout(() => {
+          mainImg.src = data.src;
+          mainImg.dataset.zoomSrc = data.src;
+          mainImg.classList.remove('fade-out');
+        }, 150);
+
+        // Update Counter & Progress
+        counterText.textContent = `${String(currentIndex + 1).padStart(2, '0')} / ${String(neuralVisuals.length).padStart(2, '0')}`;
+        progressFill.style.width = `${((currentIndex + 1) / neuralVisuals.length) * 100}%`;
+        shotBadge.textContent = `SHOT ${String(currentIndex + 1).padStart(2, '0')} OF ${String(neuralVisuals.length).padStart(2, '0')}`;
+        resBadge.textContent = data.res;
+
+        // Update Meta Card
+        metaEyebrow.textContent = data.eyebrow;
+        metaTitle.textContent = data.title;
+        metaDesc.textContent = data.desc;
+        metaChips.innerHTML = data.chips.map((c, i) => `<span class="cinema-chip ${i === 0 ? 'highlight' : ''}">${c}</span>`).join('');
+
+        // Update Filmstrip Active State & Scroll
+        const thumbs = filmstripStrip.querySelectorAll('.filmstrip-thumb');
+        thumbs.forEach((t, i) => {
+          if (i === currentIndex) {
+            t.classList.add('active');
+            t.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+          } else {
+            t.classList.remove('active');
+          }
+        });
+      }
+
+      function nextVisual() {
+        showVisual(currentIndex + 1);
+      }
+
+      function prevVisual() {
+        showVisual(currentIndex - 1);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prevVisual();
+        if (isAutoplaying) stopAutoplay();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextVisual();
+        if (isAutoplaying) stopAutoplay();
+      });
+
+      // Keyboard Arrow Navigation
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
+          nextVisual();
+          if (isAutoplaying) stopAutoplay();
+        } else if (e.key === 'ArrowLeft') {
+          prevVisual();
+          if (isAutoplaying) stopAutoplay();
+        }
+      });
+
+      // Autoplay Toggle
+      function startAutoplay() {
+        isAutoplaying = true;
+        autoplayBtn.classList.add('active-autoplay');
+        playIcon.textContent = '⏸';
+        playText.textContent = 'Pause';
+        autoplayTimer = setInterval(nextVisual, 3200);
+      }
+
+      function stopAutoplay() {
+        isAutoplaying = false;
+        autoplayBtn.classList.remove('active-autoplay');
+        playIcon.textContent = '▶';
+        playText.textContent = 'Play Sequence';
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+
+      autoplayBtn.addEventListener('click', () => {
+        if (isAutoplaying) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
+      });
+
+      // Zoom Trigger
+      zoomBtn.addEventListener('click', () => {
+        const cur = neuralVisuals[currentIndex];
+        if (typeof window.openLightbox === 'function') {
+          window.openLightbox(cur.src, `<strong>${cur.title}</strong> &bull; ${cur.res}`);
+        } else {
+          const lb = document.getElementById('lightboxModal');
+          const lbi = document.getElementById('lightboxImg');
+          const lbc = document.getElementById('lightboxCaption');
+          if (lb && lbi) {
+            lbi.src = cur.src;
+            if (lbc) lbc.innerHTML = `<strong>${cur.title}</strong> &bull; ${cur.res}`;
+            lb.classList.add('active');
+          }
+        }
+      });
+
+      // Click on main image also triggers zoom
+      mainImg.addEventListener('click', () => {
+        zoomBtn.click();
+      });
+
+      // Initialize with first visual
+      showVisual(0);
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+scratch/
+cookies.txt
+
+# Raw local dump directories (all live website assets are organized in public/)
+pt content/
+AI_CaseStudy_Doc/
+UGC_Video/
+A+ pages/
+AI_creation/
+Assest/
+Gallery/
+
+# Local working files
+*.docx
+resume_text.txt

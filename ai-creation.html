@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Creation Atelier — Commercial-Grade Generative Synthesis | Karan Kumar S</title>
+  <meta name="description" content="AI Creation Atelier by Karan Kumar S: Commercial-grade generative synthesis, custom LoRA character consistency, ComfyUI node workflows, Higgsfield AI, and sub-pixel hardware inpainting.">
+  <meta name="author" content="Karan Kumar S">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Creation Atelier — Karan Kumar S">
+  <meta property="og:description" content="Commercial-grade generative AI synthesis, 5K asset retouching, and LoRA character consistency pipelines.">
+  <meta property="og:image" content="/ai_creation/redbull/frames/frame_05.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64x64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="paper-canvas">
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Ambient Fluid Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- Tactile Paper Overlay -->
+  <div class="paper-grain-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation Header -->
+  <header class="main-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="brand-mark" aria-label="Karan Kumar S Portfolio Home">
+        <div class="brand-avatar-wrap">
+          <img src="/behance_assets/crops/karan_kumar_portrait.jpg" alt="Karan Kumar S" class="brand-avatar-img">
+          <span class="brand-online-dot" title="Available for Creative Direction"></span>
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">KARAN KUMAR S</span>
+          <span class="brand-role">AI CREATIVE STRATEGIST &bull; E-COMMERCE VISUAL DESIGNER</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">&larr; Back to Portfolio</a></li>
+          <li><a href="ai-creation.html" class="nav-link active">AI Creation</a></li>
+          <li><a href="case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="ugc-videos.html" class="nav-link">UGC Videos</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Cluster -->
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn-primary-header">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 20 20" width="14" height="14" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-trigger" id="mobileMenuTrigger" aria-label="Open Navigation Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-head">
+        <span class="drawer-title">Navigation</span>
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-link">&larr; Back to Portfolio Home</a></li>
+        <li><a href="ai-creation.html" class="mobile-link active">01. AI Creation Atelier</a></li>
+        <li><a href="case-studies.html" class="mobile-link">02. Strategic Case Studies</a></li>
+        <li><a href="ugc-videos.html" class="mobile-link">03. UGC Video Vault</a></li>
+        <li><a href="index.html#contact" class="mobile-link">04. Get in Touch</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="main-content" id="mainContent">
+
+    <!-- Section Divider Top Banner -->
+    <div class="torn-banner-strip dark-torn" id="ai-creation" style="margin-top: 80px;">
+      <div class="banner-torn-top" aria-hidden="true"></div>
+      <div class="banner-inner">
+        <h1 class="banner-huge-title" style="margin: 0; font-size: clamp(32px, 5vw, 64px);">ai creation</h1>
+        <span class="banner-sub">COMMERCIAL-GRADE GENERATIVE SYNTHESIS &bull; COMFYUI &bull; HIGGSFIELD &bull; 5K RETOUCHING</span>
+      </div>
+      <div class="banner-torn-bottom" aria-hidden="true"></div>
+    </div>
+
+    <!-- AI CREATION SECTION -->
+    <section class="ai-creation-section dark-zone" style="padding-top: 40px;">
+      <div class="section-container">
+        
+        <!-- Breadcrumbs -->
+        <nav class="project-breadcrumbs" aria-label="Breadcrumb" style="margin-bottom: 24px; display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; color: #8C92A4;">
+          <a href="index.html" style="color: #CBD5E1; text-decoration: none;">Home</a>
+          <span>&rsaquo;</span>
+          <span style="color: #E60028; font-weight: 700;">AI Creation Atelier</span>
+        </nav>
+
+        <div class="section-head-split">
+          <div>
+            <span class="section-eyebrow text-crimson">04. GENERATIVE ATELIER</span>
+            <h2 class="section-headline-lg text-cream">
+              AI CREATIVE SYNTHESIS &amp; COMMERCIAL INPAINTING
+            </h2>
+            <p class="section-subtext text-mist">
+              Beyond simple prompting: custom node pipelines, forced-perspective 3D commercial dynamics, sub-pixel inpainting, and studio-grade brand livery integration.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Curated AI Creation Directory Cards -->
+        <div class="showcase-thumbnail-grid" style="margin-top: 36px;">
+          
+          <!-- Card 1: Red Bull Racing Spec Film -->
+          <a href="case-study-redbull.html" class="showcase-thumb-card featured-card" id="thumbRedbullCreation" aria-label="Explore Red Bull Racing AI Commercial Showcase">
+            <div class="thumb-media-stage">
+              <img src="/ai_creation/redbull/frames/frame_05.jpg" alt="Red Bull Racing Spec Ad Cockpit Awakening">
+              <span class="thumb-badge-top-left" style="background: #E60028; color: #FFFFFF;">🏎️ FLAGSHIP AI SPEC FILM</span>
+              <span class="thumb-badge-top-right">0:32 &bull; 1080P 60FPS</span>
+              <div class="thumb-play-hover-indicator">
+                <div class="thumb-play-circle">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+                </div>
+              </div>
+            </div>
+            <div class="thumb-card-body">
+              <div>
+                <span class="thumb-card-eyebrow">COMMERCIAL SPEC FILM &bull; DIRECTED BY KARAN KUMAR S</span>
+                <h4 class="thumb-card-title">Red Bull Racing &mdash; &ldquo;Unleash The Beast&rdquo;</h4>
+                <p class="thumb-card-desc">
+                  Broadcast-caliber 32s spec commercial featuring Karan Kumar S as F1 driver, Kling 1.5 Pro video diffusion, custom Kohya SDXL face LoRA, and neural foley audio scoring.
+                </p>
+                <div class="thumb-card-tags">
+                  <span class="thumb-tag-chip">KLING 1.5 PRO</span>
+                  <span class="thumb-tag-chip">KOHYA LoRA</span>
+                  <span class="thumb-tag-chip">COMFYUI</span>
+                  <span class="thumb-tag-chip">ELEVENLABS</span>
+                </div>
+              </div>
+              <div class="thumb-card-cta">
+                <span>Watch Film &amp; View Full Standalone Case Study</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 2: Kinetic Speed Blast -->
+          <a href="ai-creation-kinetic-speed.html" class="showcase-thumb-card" aria-label="Explore Kinetic Speed Blast">
+            <div class="thumb-media-stage">
+              <img src="/AI_creation/Image.01.png" alt="Kinetic Speed Blast 3D Commercial Art">
+              <span class="thumb-badge-top-left" style="background: rgba(10, 10, 14, 0.88); color: #FFC226; border: 1.5px solid #FFC226;">HIGGSFIELD + COMFYUI</span>
+              <span class="thumb-badge-top-right">4K MASTER</span>
+              <div class="thumb-play-hover-indicator">
+                <div class="thumb-play-circle" style="background: #FFC226; color: #000;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="thumb-card-body">
+              <div>
+                <span class="thumb-card-eyebrow">SPORTS LAUNCH CAMPAIGN &bull; HERO AD</span>
+                <h4 class="thumb-card-title">Kinetic Speed Blast &mdash; 3D Commercial Art</h4>
+                <p class="thumb-card-desc">
+                  Engineered for high-CTR sports campaigns: extreme wide-angle forced perspective with neon luminescent guide-tracks and kinetic particle vectors.
+                </p>
+                <div class="thumb-card-tags">
+                  <span class="thumb-tag-chip">FORCED PERSPECTIVE</span>
+                  <span class="thumb-tag-chip">SPORTSTECH</span>
+                  <span class="thumb-tag-chip">HERO UNIT</span>
+                </div>
+              </div>
+              <div class="thumb-card-cta">
+                <span>View Dedicated Showcase</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 3: Desert Mirage 5K -->
+          <a href="ai-creation-desert-mirage.html" class="showcase-thumb-card" aria-label="Explore Desert Mirage 5K Horizon">
+            <div class="thumb-media-stage">
+              <img src="/AI_creation/Image.02.png" alt="Desert Mirage Horizon 5K Photorealism">
+              <span class="thumb-badge-top-left" style="background: rgba(10, 10, 14, 0.88); color: #C4B5FD; border: 1.5px solid #A78BFA;">5568 &times; 3072 ULTRA-HD</span>
+              <span class="thumb-badge-top-right">CATALOG GRADE</span>
+              <div class="thumb-play-hover-indicator">
+                <div class="thumb-play-circle" style="background: #A78BFA; color: #000;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="thumb-card-body">
+              <div>
+                <span class="thumb-card-eyebrow">COMMERCIAL HARDWARE SYNTHESIS</span>
+                <h4 class="thumb-card-title">Desert Mirage Horizon &mdash; 5K Photorealism</h4>
+                <p class="thumb-card-desc">
+                  Hardware visual synthesis atop golden dunes with physically accurate natural lighting, sand displacement, and OLED reflections mirroring the horizon.
+                </p>
+                <div class="thumb-card-tags">
+                  <span class="thumb-tag-chip">PHYSICAL ACCURACY</span>
+                  <span class="thumb-tag-chip">5K ASSET</span>
+                  <span class="thumb-tag-chip">OLED HUD</span>
+                </div>
+              </div>
+              <div class="thumb-card-cta">
+                <span>View Dedicated Showcase</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Card 4: Neural Facial & Identity Consistency (Links to 14-Visual Sequence Page) -->
+          <a href="ai-creation-neural-portraits.html" class="showcase-thumb-card" aria-label="Explore Neural Avatar Fidelity &amp; Macro Studio Portraits (14 Visuals)">
+            <div class="thumb-media-stage">
+              <img src="/ai_creation/freepik_portrait_closeup.png" alt="Neural Avatar Fidelity &amp; Macro Studio Portraits" loading="lazy">
+              <span class="thumb-badge-top-left" style="background: rgba(10, 10, 14, 0.88); color: #F472B6; border: 1.5px solid #F472B6;">5.5K FACIAL CONSISTENCY</span>
+              <span class="thumb-badge-top-right">14-SHOT SEQUENCE</span>
+              <div class="thumb-play-hover-indicator">
+                <div class="thumb-play-circle" style="background: #EC4899; color: #000;">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="thumb-card-body">
+              <div>
+                <span class="thumb-card-eyebrow">HYPER-REALISTIC CHARACTER CONSISTENCY &bull; 14 RENDERS</span>
+                <h4 class="thumb-card-title">Neural Avatar Fidelity &amp; Macro Studio Portraits</h4>
+                <p class="thumb-card-desc">
+                  Studio-grade macro portrait diffusion with zero skin artifacting, natural micro-pore texture, and persistent brand-athlete facial identity across multi-scene campaigns.
+                </p>
+                <div class="thumb-card-tags">
+                  <span class="thumb-tag-chip">14 VISUALS ONE-BY-ONE</span>
+                  <span class="thumb-tag-chip">NEURAL AVATAR</span>
+                  <span class="thumb-tag-chip">IDENTITY LORA</span>
+                  <span class="thumb-tag-chip">STUDIO MACRO</span>
+                </div>
+              </div>
+              <div class="thumb-card-cta">
+                <span>View All 14 Visuals One-by-One</span>
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- AI Creation Carousel Stage -->
+        <div class="ai-carousel-wrapper" style="margin-top: 50px;">
+          <div class="ai-carousel-viewport" id="aiCarouselViewport">
+            <!-- Populated via script.js -->
+          </div>
+
+          <!-- Carousel Bottom Bar -->
+          <div class="ai-carousel-bottom-bar">
+            <button class="ai-carousel-arrow prev" id="aiPrevBtn" aria-label="Previous Creation">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="ai-carousel-dots" id="aiCarouselDots">
+              <!-- Dots rendered by script.js -->
+            </div>
+            <button class="ai-carousel-arrow next" id="aiNextBtn" aria-label="Next Creation">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Section Navigation Footer -->
+        <div class="section-footer-nav-bar" style="margin-top: 50px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div class="craft-pill">
+            <span class="craft-dot"></span>
+            <span>ComfyUI &bull; Higgsfield AI &bull; Midjourney v6 &bull; Kling 1.5 &bull; Topaz 5K</span>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="case-study-redbull.html" class="btn-subtle-light">
+              <span>Read Red Bull Case Study &rarr;</span>
+            </a>
+            <a href="ugc-videos.html" class="btn-primary-header" style="text-decoration: none;">
+              <span>Next: UGC Video Vault &rarr;</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-stage">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">&times;</button>
+      <div class="lightbox-media-wrapper">
+        <img src="" alt="Enlarged Visual" class="lightbox-img" id="lightboxImg">
+      </div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-text" id="toastText"></span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div class="footer-col-brand">
+          <span class="footer-logo">KARAN KUMAR S</span>
+          <p class="footer-desc">AI Creative Strategist &amp; E-Commerce Visual Designer &bull; Madurai, Tamil Nadu &bull; Worldwide</p>
+        </div>
+        <div class="footer-col-links">
+          <a href="index.html">Home</a>
+          <a href="ai-creation.html">AI Creation Atelier</a>
+          <a href="case-studies.html">Case Studies &amp; Research</a>
+          <a href="ugc-videos.html">UGC Video Vault</a>
+          <a href="index.html#contact">Get In Touch</a>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 Karan Kumar S. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

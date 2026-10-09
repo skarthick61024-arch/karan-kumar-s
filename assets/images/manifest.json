@@ -1,0 +1,552 @@
+[
+  {
+    "index": 0,
+    "original": "media_1790405864543.png",
+    "name": "behance_header",
+    "explanation": "Captured top of Behance portfolio page",
+    "output_file": "assets/images/00_behance_header.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 1,
+    "original": "media_1790405883470.png",
+    "name": "behance_top",
+    "explanation": "Captured top of Behance page after Home key",
+    "output_file": "assets/images/01_behance_top.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 2,
+    "original": "media_1790405905076.png",
+    "name": "behance_very_top",
+    "explanation": "Captured very top of page",
+    "output_file": "assets/images/02_behance_very_top.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 3,
+    "original": "media_1790405964956.png",
+    "name": "behance_slide_1",
+    "explanation": "Captured slide 1 section",
+    "output_file": "assets/images/03_behance_slide_1.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 4,
+    "original": "media_1790405991981.png",
+    "name": "behance_slide_2",
+    "explanation": "Captured slide 2 section",
+    "output_file": "assets/images/04_behance_slide_2.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 5,
+    "original": "media_1790406013520.png",
+    "name": "behance_slide_3",
+    "explanation": "Captured section showing studio and setup",
+    "output_file": "assets/images/05_behance_slide_3.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 6,
+    "original": "media_1790406042450.png",
+    "name": "behance_slide_4",
+    "explanation": "Captured LOGOS \\u0026 MARKS intro",
+    "output_file": "assets/images/06_behance_slide_4.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 7,
+    "original": "media_1790406067750.png",
+    "name": "behance_slide_5",
+    "explanation": "Captured LOGOS \\u0026 MARKS gallery section",
+    "output_file": "assets/images/07_behance_slide_5.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 8,
+    "original": "media_1790406103144.png",
+    "name": "behance_slide_6",
+    "explanation": "Captured BRAND DESIGN section",
+    "output_file": "assets/images/08_behance_slide_6.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 9,
+    "original": "media_1790406127391.png",
+    "name": "behance_slide_7",
+    "explanation": "Captured BRANDING section title slide",
+    "output_file": "assets/images/09_behance_slide_7.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 10,
+    "original": "media_1790406151135.png",
+    "name": "behance_slide_8",
+    "explanation": "Captured branding case study 1",
+    "output_file": "assets/images/10_behance_slide_8.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 11,
+    "original": "media_1790406175616.png",
+    "name": "behance_slide_9",
+    "explanation": "Captured FUSION final brand identity slide",
+    "output_file": "assets/images/11_behance_slide_9.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 12,
+    "original": "media_1790406202008.png",
+    "name": "behance_slide_10",
+    "explanation": "Captured next branding project",
+    "output_file": "assets/images/12_behance_slide_10.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 13,
+    "original": "media_1790406247893.png",
+    "name": "behance_slide_11",
+    "explanation": "Captured DAYKNIGHTS brand visuals slide",
+    "output_file": "assets/images/13_behance_slide_11.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 14,
+    "original": "media_1790406294428.png",
+    "name": "behance_slide_12",
+    "explanation": "Captured DAYKNIGHTS mockups slide",
+    "output_file": "assets/images/14_behance_slide_12.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 15,
+    "original": "media_1790406347279.png",
+    "name": "behance_slide_13",
+    "explanation": "Captured POSTERS section intro",
+    "output_file": "assets/images/15_behance_slide_13.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 16,
+    "original": "media_1790406401058.png",
+    "name": "behance_slide_14",
+    "explanation": "Captured 2CANO brand visuals slide",
+    "output_file": "assets/images/16_behance_slide_14.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 17,
+    "original": "media_1790406452892.png",
+    "name": "behance_slide_15",
+    "explanation": "Captured 2CANO brand assets and color codes",
+    "output_file": "assets/images/17_behance_slide_15.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 18,
+    "original": "media_1790406500051.png",
+    "name": "behance_slide_16",
+    "explanation": "Captured POSTERS section title and artwork grid",
+    "output_file": "assets/images/18_behance_slide_16.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 19,
+    "original": "media_1790406555297.png",
+    "name": "behance_slide_17",
+    "explanation": "Captured poster collection section 1",
+    "output_file": "assets/images/19_behance_slide_17.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 20,
+    "original": "media_1790406608431.png",
+    "name": "behance_slide_18",
+    "explanation": "Captured poster collection section 2",
+    "output_file": "assets/images/20_behance_slide_18.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 21,
+    "original": "media_1790406671804.png",
+    "name": "behance_slide_19",
+    "explanation": "Captured poster collection section 3",
+    "output_file": "assets/images/21_behance_slide_19.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 22,
+    "original": "media_1790406732484.png",
+    "name": "behance_slide_20",
+    "explanation": "Captured SOCIAL MEDIA DESIGN section title",
+    "output_file": "assets/images/22_behance_slide_20.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 23,
+    "original": "media_1790406796122.png",
+    "name": "behance_slide_21",
+    "explanation": "Captured social media graphics grid",
+    "output_file": "assets/images/23_behance_slide_21.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 24,
+    "original": "media_1790406857636.png",
+    "name": "behance_slide_22",
+    "explanation": "Captured SPIFFERS social posts slide",
+    "output_file": "assets/images/24_behance_slide_22.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 25,
+    "original": "media_1790406925680.png",
+    "name": "behance_slide_23",
+    "explanation": "Captured contact / closing section slide",
+    "output_file": "assets/images/25_behance_slide_23.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 26,
+    "original": "media_1790406989281.png",
+    "name": "behance_slide_24",
+    "explanation": "Captured final thank you / contact slide",
+    "output_file": "assets/images/26_behance_slide_24.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 27,
+    "original": "media_1790407062591.png",
+    "name": "behance_slide_25",
+    "explanation": "Captured contact and social media handles slide",
+    "output_file": "assets/images/27_behance_slide_25.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 28,
+    "original": "media_1790407137464.png",
+    "name": "behance_slide_26",
+    "explanation": "Captured final thank you slide",
+    "output_file": "assets/images/28_behance_slide_26.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 29,
+    "original": "media_1790407209447.png",
+    "name": "behance_slide_27",
+    "explanation": "Captured portfolio conclusion slide",
+    "output_file": "assets/images/29_behance_slide_27.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 30,
+    "original": "media_1790407278037.png",
+    "name": "behance_slide_28",
+    "explanation": "Captured end of portfolio project slide",
+    "output_file": "assets/images/30_behance_slide_28.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 31,
+    "original": "media_1790407341448.png",
+    "name": "behance_slide_29",
+    "explanation": "Captured character design and illustrations slide",
+    "output_file": "assets/images/31_behance_slide_29.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 32,
+    "original": "media_1790407412784.png",
+    "name": "behance_slide_30",
+    "explanation": "Captured illustration gallery slide",
+    "output_file": "assets/images/32_behance_slide_30.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 33,
+    "original": "media_1790407477068.png",
+    "name": "behance_slide_31",
+    "explanation": "Captured character turnaround / expression sheet slide",
+    "output_file": "assets/images/33_behance_slide_31.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 34,
+    "original": "media_1790407551727.png",
+    "name": "behance_slide_32",
+    "explanation": "Captured SPIRIT REVENGERS character concept art",
+    "output_file": "assets/images/34_behance_slide_32.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 35,
+    "original": "media_1790407622764.png",
+    "name": "behance_slide_33",
+    "explanation": "Captured digital character renders slide",
+    "output_file": "assets/images/35_behance_slide_33.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 36,
+    "original": "media_1790407690398.png",
+    "name": "behance_slide_34",
+    "explanation": "Captured Gwapo character detail slide",
+    "output_file": "assets/images/36_behance_slide_34.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 37,
+    "original": "media_1790407756619.png",
+    "name": "behance_slide_35",
+    "explanation": "Captured portfolio footer / thank you screen",
+    "output_file": "assets/images/37_behance_slide_35.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 38,
+    "original": "media_1790407820914.png",
+    "name": "behance_slide_36",
+    "explanation": "Captured 2D MOTION title slide",
+    "output_file": "assets/images/38_behance_slide_36.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 39,
+    "original": "media_1790407889126.png",
+    "name": "behance_slide_37",
+    "explanation": "Captured 2D motion graphics previews slide",
+    "output_file": "assets/images/39_behance_slide_37.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 40,
+    "original": "media_1790407952432.png",
+    "name": "behance_slide_38",
+    "explanation": "Captured 3D modeling and animation header slide",
+    "output_file": "assets/images/40_behance_slide_38.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 41,
+    "original": "media_1790408014962.png",
+    "name": "behance_slide_39",
+    "explanation": "Captured 3D model render slide",
+    "output_file": "assets/images/41_behance_slide_39.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 42,
+    "original": "media_1790408067905.png",
+    "name": "behance_slide_40",
+    "explanation": "Captured end of portfolio page slide",
+    "output_file": "assets/images/42_behance_slide_40.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 43,
+    "original": "media_1790408103889.png",
+    "name": "behance_slide_41",
+    "explanation": "Captured thank you / appreciation section slide",
+    "output_file": "assets/images/43_behance_slide_41.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 44,
+    "original": "media_1790408148707.png",
+    "name": "behance_slide_42",
+    "explanation": "Captured final portfolio section slide",
+    "output_file": "assets/images/44_behance_slide_42.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 45,
+    "original": "media_1790408205976.png",
+    "name": "behance_slide_43",
+    "explanation": "Captured thank you ending slide",
+    "output_file": "assets/images/45_behance_slide_43.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 46,
+    "original": "media_1790408273583.png",
+    "name": "behance_slide_44",
+    "explanation": "Captured playlist section slide",
+    "output_file": "assets/images/46_behance_slide_44.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 47,
+    "original": "media_1790408522864.png",
+    "name": "behance_current_page",
+    "explanation": "Captured current view of Behance portfolio page",
+    "output_file": "assets/images/47_behance_current_page.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 48,
+    "original": "media_1790408588154.png",
+    "name": "behance_after_close",
+    "explanation": "Captured screenshot after closing lightbox",
+    "output_file": "assets/images/48_behance_after_close.webp",
+    "size": [
+      1560,
+      801
+    ]
+  },
+  {
+    "index": 49,
+    "original": "media_1790408665073.png",
+    "name": "behance_full_project",
+    "explanation": "Captured Behance graphic design portfolio main view",
+    "output_file": "assets/images/49_behance_full_project.webp",
+    "size": [
+      1560,
+      801
+    ]
+  }
+]

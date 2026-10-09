@@ -1,0 +1,162 @@
+[
+  {
+    "id": "seekora",
+    "col": 0,
+    "row": 0,
+    "name": "Seekora",
+    "category": "Tech & AI",
+    "year": "2024",
+    "desc": "Minimalist spiral tech mark for an AI search & discovery engine",
+    "image": "/behance_assets/logos/seekora.jpg"
+  },
+  {
+    "id": "tsunami",
+    "col": 1,
+    "row": 0,
+    "name": "Tsunami (\u65e5\u672c\u6599\u7406)",
+    "category": "Hospitality",
+    "year": "2023",
+    "desc": "Authentic Japanese dining & sushi bar visual identity",
+    "image": "/behance_assets/logos/tsunami.jpg"
+  },
+  {
+    "id": "delice",
+    "col": 2,
+    "row": 0,
+    "name": "D\u00e9lice",
+    "category": "Culinary & Bakery",
+    "year": "2024",
+    "desc": "Artisanal French patisserie & cafe warm line illustration",
+    "image": "/behance_assets/logos/delice.jpg"
+  },
+  {
+    "id": "chaos_balance",
+    "col": 3,
+    "row": 0,
+    "name": "Chaos & Balance",
+    "category": "Fashion & Luxury",
+    "year": "2025",
+    "desc": "Contemporary high-fashion brand monogram",
+    "image": "/behance_assets/logos/chaos_balance.jpg"
+  },
+  {
+    "id": "beyond_payday",
+    "col": 0,
+    "row": 1,
+    "name": "Beyond Payday",
+    "category": "Fintech",
+    "year": "2024",
+    "desc": "Modern progressive financial wellness & payroll platform",
+    "image": "/behance_assets/logos/beyond_payday.jpg"
+  },
+  {
+    "id": "sunset",
+    "col": 1,
+    "row": 1,
+    "name": "Sunset",
+    "category": "Beverage & Lifestyle",
+    "year": "2023",
+    "desc": "Fluid organic lettering for a botanical sunset refreshment",
+    "image": "/behance_assets/logos/sunset.jpg"
+  },
+  {
+    "id": "exquisite",
+    "col": 2,
+    "row": 1,
+    "name": "Exquisite",
+    "category": "Beauty & Jewelry",
+    "year": "2024",
+    "desc": "Geometric starburst emblem for fine jewelry & atelier",
+    "image": "/behance_assets/logos/exquisite.jpg"
+  },
+  {
+    "id": "fusion",
+    "col": 3,
+    "row": 1,
+    "name": "Fusion",
+    "category": "Digital Platform",
+    "year": "2024",
+    "desc": "Bold kinetic F monogram for next-gen digital experience",
+    "image": "/behance_assets/logos/fusion.jpg"
+  },
+  {
+    "id": "rozkvit_club",
+    "col": 0,
+    "row": 2,
+    "name": "Rozkvit Club",
+    "category": "Community & Wellness",
+    "year": "2023",
+    "desc": "Floral bloom symbol for women's self-development club",
+    "image": "/behance_assets/logos/rozkvit_club.jpg"
+  },
+  {
+    "id": "cappelli_music",
+    "col": 1,
+    "row": 2,
+    "name": "Cappelli Music",
+    "category": "Music & Sound",
+    "year": "2024",
+    "desc": "Acoustic resonance waves mark for an independent music label",
+    "image": "/behance_assets/logos/cappelli_music.jpg"
+  },
+  {
+    "id": "buduy",
+    "col": 2,
+    "row": 2,
+    "name": "\u0411\u0443\u0434\u0443\u0439 (Buduy)",
+    "category": "Architecture",
+    "year": "2024",
+    "desc": "Constructivist geometric brand for modern architectural bureau",
+    "image": "/behance_assets/logos/buduy.jpg"
+  },
+  {
+    "id": "bymaid",
+    "col": 3,
+    "row": 2,
+    "name": "ByMaid",
+    "category": "Home & Services",
+    "year": "2023",
+    "desc": "Friendly roofline and bubbles housekeeping brandmark",
+    "image": "/behance_assets/logos/bymaid.jpg"
+  },
+  {
+    "id": "wine_circl",
+    "col": 0,
+    "row": 3,
+    "name": "Wine Circl.",
+    "category": "Beverage & Community",
+    "year": "2024",
+    "desc": "Serif circular brand identity for boutique wine tasting club",
+    "image": "/behance_assets/logos/wine_circl.jpg"
+  },
+  {
+    "id": "armoriosa",
+    "col": 1,
+    "row": 3,
+    "name": "Armoriosa",
+    "category": "Footwear & Fashion",
+    "year": "2024",
+    "desc": "Empowered feminine crest for women's protective luxury footwear",
+    "image": "/behance_assets/logos/armoriosa.jpg"
+  },
+  {
+    "id": "the_meridian",
+    "col": 2,
+    "row": 3,
+    "name": "The Meridian",
+    "category": "Fine Dining",
+    "year": "2024",
+    "desc": "Timeless hospitality crest for fine dining & event catering",
+    "image": "/behance_assets/logos/the_meridian.jpg"
+  },
+  {
+    "id": "otiara",
+    "col": 3,
+    "row": 3,
+    "name": "Otiara",
+    "category": "Retreats & Resort",
+    "year": "2025",
+    "desc": "Four-leaf diamond emblem for hosted wellness sanctuary",
+    "image": "/behance_assets/logos/otiara.jpg"
+  }
+]
